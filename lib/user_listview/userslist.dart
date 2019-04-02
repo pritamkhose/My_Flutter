@@ -112,7 +112,7 @@ class UserDetailPage extends StatelessWidget {
               ),
             ),
             Divider(),
-            Text('Profile Details'),
+            Text('Profile Details', style: TextStyle(color: Colors.red, fontSize: 22),),
             Container(
               // height: MediaQuery.of(context).size.height,
               child: Padding(
@@ -123,10 +123,10 @@ class UserDetailPage extends StatelessWidget {
                     TableRow(children: [
                       TableCell(
                         child: Row(
-                          mainAxisAlignment: MainAxisAlignment.start,
+                          mainAxisAlignment: MainAxisAlignment.spaceAround,
                           children: <Widget>[
-                            new Text('ID'),
-                            new Text(user.fullName.toString()),
+                            new Text('ID',  textAlign: TextAlign.start),
+                            new Text(user.fullName.toString() ,  textAlign: TextAlign.end),
                           ],
                         ),
                       )
@@ -134,10 +134,10 @@ class UserDetailPage extends StatelessWidget {
                     TableRow(children: [
                       TableCell(
                         child: Row(
-                          mainAxisAlignment: MainAxisAlignment.start,
+                          mainAxisAlignment: MainAxisAlignment.spaceAround,
                           children: <Widget>[
-                            new Text('Full Name'),
-                            new Text(user.fullName.toString()),
+                            new Text('Full Name',  textAlign: TextAlign.start),
+                            new Text(user.fullName.toString(),  textAlign: TextAlign.end),
                           ],
                         ),
                       )
@@ -145,10 +145,10 @@ class UserDetailPage extends StatelessWidget {
                     TableRow(children: [
                       TableCell(
                         child: Row(
-                          mainAxisAlignment: MainAxisAlignment.start,
+                          mainAxisAlignment: MainAxisAlignment.spaceAround,
                           children: <Widget>[
-                            new Text('Email'),
-                            new Text(user.email.toString()),
+                            new Text('Email', textAlign: TextAlign.start),
+                            new Text(user.email.toString(),  textAlign: TextAlign.end),
                           ],
                         ),
                       )
@@ -156,10 +156,10 @@ class UserDetailPage extends StatelessWidget {
                     TableRow(children: [
                       TableCell(
                         child: Row(
-                          mainAxisAlignment: MainAxisAlignment.end,
+                          mainAxisAlignment: MainAxisAlignment.spaceAround,
                           children: <Widget>[
-                            new Text('Mobile'),
-                            new Text(user.mobileNumber.toString()),
+                            new Text('Mobile', textAlign: TextAlign.start),
+                            new Text(user.mobileNumber.toString(),  textAlign: TextAlign.end),
                           ],
                         ),
                       )
