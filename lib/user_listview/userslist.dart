@@ -38,7 +38,7 @@ class _UsersListState extends State<UsersList> {
       appBar: AppBar(
           title: Text('Users',
               style:
-              TextStyle(color: Colors.white, fontWeight: FontWeight.bold))),
+                  TextStyle(color: Colors.white, fontWeight: FontWeight.bold))),
       body: Container(
         child: FutureBuilder(
             future: _getUsers(),
@@ -65,7 +65,7 @@ class _UsersListState extends State<UsersList> {
                         subtitle: Text(snapshot.data[index].mobileNumber),
                         leading: CircleAvatar(
                             backgroundImage:
-                            NetworkImage(snapshot.data[index].imageUrl)),
+                                NetworkImage(snapshot.data[index].imageUrl)),
                       );
                     });
               }
@@ -87,6 +87,7 @@ class User {
   User(this.fullName, this.email, this.imageUrl, this.mobileNumber);
 }
 
+// https://github.com/AseemWangoo/flutter_programs/blob/master/Table.dart
 class UserDetailPage extends StatelessWidget {
   final User user;
 
@@ -98,7 +99,78 @@ class UserDetailPage extends StatelessWidget {
       appBar: AppBar(
         title: Text(user.fullName),
       ),
+      body: Container(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: <Widget>[
+            Padding(
+              padding: const EdgeInsets.all(20.0),
+              child: CircleAvatar(
+                backgroundColor: Colors.orangeAccent,
+                backgroundImage: NetworkImage(user.imageUrl.toString()),
+                maxRadius: 120.0,
+              ),
+            ),
+            Divider(),
+            Text('Profile Details'),
+            Container(
+              // height: MediaQuery.of(context).size.height,
+              child: Padding(
+                padding: const EdgeInsets.all(14.0),
+                child: Table(
+                  border: TableBorder.all(width: 1.0, color: Colors.black),
+                  children: [
+                    TableRow(children: [
+                      TableCell(
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          children: <Widget>[
+                            new Text('ID'),
+                            new Text(user.fullName.toString()),
+                          ],
+                        ),
+                      )
+                    ]),
+                    TableRow(children: [
+                      TableCell(
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          children: <Widget>[
+                            new Text('Full Name'),
+                            new Text(user.fullName.toString()),
+                          ],
+                        ),
+                      )
+                    ]),
+                    TableRow(children: [
+                      TableCell(
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          children: <Widget>[
+                            new Text('Email'),
+                            new Text(user.email.toString()),
+                          ],
+                        ),
+                      )
+                    ]),
+                    TableRow(children: [
+                      TableCell(
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.end,
+                          children: <Widget>[
+                            new Text('Mobile'),
+                            new Text(user.mobileNumber.toString()),
+                          ],
+                        ),
+                      )
+                    ])
+                  ],
+                ),
+              ),
+            ),
+          ],
+        ),
+      ),
     );
   }
 }
-
