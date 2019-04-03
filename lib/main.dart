@@ -5,6 +5,8 @@ import 'package:flutter/material.dart';
 import 'fetch_data/main_fetch_data.dart';
 import 'flutter_default.dart';
 import 'user_listview/user_listview.dart';
+import 'myform/myform.dart';
+import 'googlemap/googlemapsample.dart';
 
 // https://github.com/diegoveloper/flutter-samples
 // https://flutter.dev/docs/cookbook/lists/basic-list
@@ -56,6 +58,18 @@ class MyAppState extends State<MyApp> {
               title: "HTTP a JSON Listview",
               actionTap: () {
                 onButtonTap(UsersListView());
+              },
+            ),
+            MyMenuButton(
+              title: "My Edit Form with List",
+              actionTap: () {
+                onButtonTap(MyForm());
+              },
+            ),
+            MyMenuButton(
+              title: "Google Map",
+              actionTap: () {
+                onButtonTap(GoogleMapSample());
               },
             ),
           ],
