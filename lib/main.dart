@@ -7,6 +7,11 @@ import 'flutter_default.dart';
 import 'user_listview/user_listview.dart';
 import 'myform/myform.dart';
 import 'googlemap/googlemapsample.dart';
+import 'animations/loader.dart';
+import 'navigation/tabs.dart';
+import 'navigation/slidenavigation.dart';
+import 'navigation/home_page.dart';
+//import 'video/videoplayer';
 
 // https://github.com/diegoveloper/flutter-samples
 // https://flutter.dev/docs/cookbook/lists/basic-list
@@ -72,6 +77,39 @@ class MyAppState extends State<MyApp> {
                 onButtonTap(GoogleMapSample());
               },
             ),
+            MyMenuButton(
+              title: "Video Player",
+              actionTap: () {
+               // onButtonTap(VideoApp());
+              },
+            ),
+            MyMenuButton(
+              title: "Flutter Animations",
+              actionTap: () {
+                FlutterAnimations();
+              },
+            ),
+            MyMenuButton(
+              // https://kodestat.gitbook.io/flutter/flutter-tab-navigation
+              title: "Tab Navigation",
+              actionTap: () {
+                TabNavigation();
+              },
+            ),
+            MyMenuButton(
+              // https://kodestat.gitbook.io/flutter/flutter-sliding-menu-using-a-drawer
+              title: "Sliding menu using a Drawer Navigation",
+              actionTap: () {
+                SlideNavigation();
+              },
+            ),
+            MyMenuButton(
+              // https://kodestat.gitbook.io/flutter/flutter-sliding-menu-using-a-drawer/simple-drawer
+              title: "Home menu a Drawer Navigation",
+              actionTap: () {
+                HomeNavigation();
+              },
+            )
           ],
         ),
       ),
