@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 // import 'package:toast/toast.dart';
 //import 'package:fluttertoast/fluttertoast.dart';
+import 'package:firebase_messaging/firebase_messaging.dart';
 
 import 'fetch_data/main_fetch_data.dart';
 import 'flutter_default.dart';
@@ -11,6 +12,7 @@ import 'animations/loader.dart';
 import 'navigation/tabs.dart';
 import 'navigation/slidenavigation.dart';
 import 'navigation/home_page.dart';
+import 'fcm/fcm.dart';
 //import 'video/videoplayer';
 
 // https://github.com/diegoveloper/flutter-samples
@@ -108,6 +110,14 @@ class MyAppState extends State<MyApp> {
               title: "Home menu a Drawer Navigation",
               actionTap: () {
                 HomeNavigation();
+              },
+            ),
+            MyMenuButton(
+              // http://myhexaville.com/2018/04/09/flutter-push-notifications-with-firebase-cloud-messaging/
+              // https://github.com/nitishk72/firebase_messaging_flutter
+              title: "FCM",
+              actionTap: () {
+                FCMNotify();
               },
             )
           ],

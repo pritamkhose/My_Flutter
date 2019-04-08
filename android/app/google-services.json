@@ -1,0 +1,107 @@
+{
+  "project_info": {
+    "project_number": "1065695646631",
+    "firebase_url": "https://fiberbase-4b621.firebaseio.com",
+    "project_id": "fiberbase-4b621",
+    "storage_bucket": "fiberbase-4b621.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1065695646631:android:982c498f33b18e75",
+        "android_client_info": {
+          "package_name": "com.example.my_flutter"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDGOJQcqnxf2IGT-UxYHKZFvQYyqWHzudA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1065695646631-74r99t3ldggt1lu7esc5nuv07vu2merr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1065695646631:android:9b5d2a587c5237da",
+        "android_client_info": {
+          "package_name": "com.pritam.crashanalytics"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDGOJQcqnxf2IGT-UxYHKZFvQYyqWHzudA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1065695646631-74r99t3ldggt1lu7esc5nuv07vu2merr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1065695646631:android:bd80562723a143fd",
+        "android_client_info": {
+          "package_name": "com.pritam.myappfcm"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDGOJQcqnxf2IGT-UxYHKZFvQYyqWHzudA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1065695646631-74r99t3ldggt1lu7esc5nuv07vu2merr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1065695646631:android:a4ffb6d110652d48",
+        "android_client_info": {
+          "package_name": "com.pritam.myworldapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDGOJQcqnxf2IGT-UxYHKZFvQYyqWHzudA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1065695646631-74r99t3ldggt1lu7esc5nuv07vu2merr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
