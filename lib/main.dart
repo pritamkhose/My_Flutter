@@ -13,11 +13,13 @@ import 'navigation/tabs.dart';
 import 'navigation/slidenavigation.dart';
 import 'navigation/home_page.dart';
 import 'fcm/fcm.dart';
+import 'util/url_launcher.dart';
 //import 'video/videoplayer';
 
 // https://github.com/diegoveloper/flutter-samples
 // https://flutter.dev/docs/cookbook/lists/basic-list
 // https://pub.dartlang.org/packages/toast
+// https://pub.dartlang.org/flutter/packages
 
 void main() => runApp(MaterialApp(
       theme: ThemeData(
@@ -115,9 +117,20 @@ class MyAppState extends State<MyApp> {
             MyMenuButton(
               // http://myhexaville.com/2018/04/09/flutter-push-notifications-with-firebase-cloud-messaging/
               // https://github.com/nitishk72/firebase_messaging_flutter
+              // https://pub.dartlang.org/packages/firebase_messaging#-readme-tab-
+              // https://console.firebase.google.com/u/1/project/fiberbase-4b621/settings/general/android:com.example.my_flutter
               title: "FCM",
               actionTap: () {
                 FCMNotify();
+              },
+            ),
+            MyMenuButton(
+              // https://pub.dartlang.org/packages/url_launcher#-readme-tab-
+              // https://pusher.com/tutorials/flutter-listviews
+              // https://flutter.dev/docs/cookbook/lists/basic-list
+              title: "Url Launcher",
+              actionTap: () {
+                URLLauncher();
               },
             )
           ],
