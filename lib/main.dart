@@ -14,6 +14,7 @@ import 'navigation/slidenavigation.dart';
 import 'navigation/home_page.dart';
 import 'fcm/fcm.dart';
 import 'util/url_launcher.dart';
+import 'util/sms.dart';
 //import 'video/videoplayer';
 
 // https://github.com/diegoveloper/flutter-samples
@@ -131,6 +132,15 @@ class MyAppState extends State<MyApp> {
               title: "Url Launcher",
               actionTap: () {
                 URLLauncher();
+              },
+            ),
+            MyMenuButton(
+              // https://github.com/babariviere/flutter_sms
+              // https://pub.dartlang.org/packages/flutter_sms
+              // https://github.com/AppleEducate/plugins/tree/master/packages/flutter_sms/example
+              title: "SMS",
+              actionTap: () {
+                SMSContact();
               },
             )
           ],

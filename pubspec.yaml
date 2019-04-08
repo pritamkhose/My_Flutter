@@ -28,6 +28,8 @@ dependencies:
 #  video_player: 0.10.0+4
   firebase_messaging: 4.0.0+1
   url_launcher: 5.0.2
+#  sms: ^0.2.4
+#  flutter_sms: 0.2.0
 
 dev_dependencies:
   flutter_test:
