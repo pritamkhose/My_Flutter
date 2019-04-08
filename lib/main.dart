@@ -15,6 +15,7 @@ import 'navigation/home_page.dart';
 import 'fcm/fcm.dart';
 import 'util/url_launcher.dart';
 import 'util/sms.dart';
+import 'flutternative/flutternative.dart';
 //import 'video/videoplayer';
 
 // https://github.com/diegoveloper/flutter-samples
@@ -138,11 +139,21 @@ class MyAppState extends State<MyApp> {
               // https://github.com/babariviere/flutter_sms
               // https://pub.dartlang.org/packages/flutter_sms
               // https://github.com/AppleEducate/plugins/tree/master/packages/flutter_sms/example
+              // https://www.iflutter.in/flutter-sms/
+              // https://xencov.com/blog/building-a-basic-sms-app-using-flutter-part-1
               title: "SMS",
               actionTap: () {
                 SMSContact();
               },
-            )
+            ),
+            MyMenuButton(
+              // https://proandroiddev.com/communication-between-flutter-and-native-modules-9b52c6a72dd2
+              // https://github.com/RafaO/FlutterNativeCommunication/blob/master/lib/main.dart
+              title: "Flutter Native Communication",
+              actionTap: () {
+                FlutterNative();
+              },
+            ),
           ],
         ),
       ),
