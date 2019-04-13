@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'package:fluttertoast/fluttertoast.dart';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -45,6 +46,10 @@ class MyHomePage extends StatelessWidget {
               child: new Text('Show changeLife'),
               onPressed: _showChangeLife,
             ),
+            new RaisedButton(
+              child: new Text('Battery Usage'),
+              onPressed: _showBatteryUsage,
+            ),
           ],
         ),
       ),
@@ -67,4 +72,18 @@ class MyHomePage extends StatelessWidget {
   Future<Null> _showChangeLife() async {
     await platform.invokeMethod('changeLife');
   }
+
+  // https://stackoverflow.com/questions/49099408/how-to-pass-a-message-from-flutter-to-native
+  Future<dynamic> _showBatteryUsage() async {
+    String batteryLevel = 'NA';
+    String text = 'pritam';
+    try {
+      final String result = await platform.invokeMethod('getBatteryLevel',{"text":text});
+      batteryLevel = 'Battery level at $result % .';
+      Fluttertoast.showToast(msg: 'Hey ' + text +  ' , your '+ batteryLevel);
+    } on PlatformException catch (e) {
+      batteryLevel = "Failed to get battery level: '${e.message}'.";
+    }
+  }
+
 }
