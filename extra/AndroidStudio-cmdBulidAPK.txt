@@ -1,0 +1,283 @@
+Microsoft Windows [Version 10.0.17134.590]
+(c) 2018 Microsoft Corporation. All rights reserved.
+
+C:\Users\Pritam>flutter -v
+'MySQL' is not recognized as an internal or external command,
+operable program or batch file.
+'MySQL' is not recognized as an internal or external command,
+operable program or batch file.
+Manage your Flutter app development.
+
+Common commands:
+
+  flutter create <output directory>
+    Create a new Flutter project in the specified directory.
+
+  flutter run [options]
+    Run your Flutter application on an attached device or in an emulator.
+
+Usage: flutter <command> [arguments]
+
+Global options:
+-h, --help                     Print this usage information.
+-v, --verbose                  Noisy logging, including all shell commands executed.
+                               If used with --help, shows hidden options.
+
+    --quiet                    Reduce the amount of output from some commands.
+    --[no-]wrap                Toggles output word wrapping, regardless of whether or not the output is a terminal.
+                               (defaults to on)
+
+    --wrap-column              Sets the output wrap column. If not set, uses the width of the terminal. No wrapping
+                               occurs if not writing to a terminal. Use --no-wrap to turn off wrapping when connected to
+                               a terminal.
+
+-d, --device-id                Target device id or name (prefixes allowed).
+    --version                  Reports the version of this tool.
+    --machine                  When used with the --version flag, outputs the information using JSON.
+    --[no-]color               Whether to use terminal colors (requires support for ANSI escape sequences).
+                               (defaults to on)
+
+    --[no-]version-check       Allow Flutter to check for updates when this command runs.
+                               (defaults to on)
+
+    --suppress-analytics       Suppress analytics reporting when this command runs.
+    --bug-report               Captures a bug report file to submit to the Flutter team.
+                               Contains local paths, device identifiers, and log snippets.
+
+    --packages                 Path to your ".packages" file.
+                               (required, since the current directory does not contain a ".packages" file)
+
+    --flutter-root             The root directory of the Flutter repository.
+                               Defaults to $FLUTTER_ROOT if set, otherwise uses the parent of the directory that the
+                               "flutter" script itself is in.
+
+Local build selection options (not normally required):
+    --local-engine-src-path    Path to your engine src directory, if you are building Flutter locally.
+                               Defaults to $FLUTTER_ENGINE if set, otherwise defaults to the path given in your
+                               pubspec.yaml dependency_overrides for sky_engine, if any, or, failing that, tries to
+                               guess at the location based on the value of the --flutter-root option.
+
+    --local-engine             Name of a build output within the engine out directory, if you are building Flutter
+                               locally.
+                               Use this to select a specific version of the engine if you have built multiple engine
+                               targets.
+                               This path is relative to --local-engine-src-path/out.
+
+Options for testing the "flutter" tool itself:
+    --record-to                Enables recording of process invocations (including stdout and stderr of all such
+                               invocations), and file system access (reads and writes).
+                               Serializes that recording to a directory with the path specified in this flag. If the
+                               directory does not already exist, it will be created.
+
+    --replay-from              Enables mocking of process invocations by replaying their stdout, stderr, and exit code
+                               from the specified recording (obtained via --record-to). The path specified in this flag
+                               must refer to a directory that holds serialized process invocations structured according
+                               to the output of --record-to.
+
+    --show-test-device         List the special 'flutter-tester' device in device listings. This headless device is used
+                               to
+                               test Flutter tooling.
+
+Available commands:
+  analyze                  Analyze the project's Dart code.
+  attach                   Attach to a running application.
+  bash-completion          Output command line shell completion setup scripts.
+  build                    Flutter build commands.
+  channel                  List or switch flutter channels.
+  clean                    Delete the build/ and .dart_tool/ directories.
+  config                   Configure Flutter settings.
+  create                   Create a new Flutter project.
+  daemon                   Run a persistent, JSON-RPC based server to communicate with devices.
+  devices                  List all connected devices.
+  doctor                   Show information about the installed tooling.
+  drive                    Runs Flutter Driver tests for the current project.
+  emulators                List, launch and create emulators.
+  format                   Format one or more dart files.
+  help                     Display help information for flutter.
+  ide-config               Configure the IDE for use in the Flutter tree.
+  inject-plugins           Re-generates the GeneratedPluginRegistrants.
+  install                  Install a Flutter app on an attached device.
+  logs                     Show log output for running Flutter apps.
+  make-host-app-editable   Moves host apps from generated directories to non-generated directories so that they can be
+                           edited by developers.
+  packages                 Commands for managing Flutter packages.
+  precache                 Populates the Flutter tool's cache of binary artifacts.
+  run                      Run your Flutter app on an attached device.
+  screenshot               Take a screenshot from a connected device.
+  stop                     Stop your Flutter app on an attached device.
+  test                     Run Flutter unit tests for the current project.
+  trace                    Start and stop tracing for a running Flutter app.
+  update-packages          Update the packages inside the Flutter repo.
+  upgrade                  Upgrade your copy of Flutter.
+  version                  List or switch flutter versions.
+
+Run "flutter help <command>" for more information about a command.
+Run "flutter help -v" for verbose help output, including less commonly used options.
+
+C:\Users\Pritam>flutter version
+'MySQL' is not recognized as an internal or external command,
+operable program or batch file.
+'MySQL' is not recognized as an internal or external command,
+operable program or batch file.
+v0.0.10
+v0.0.11
+v0.0.12
+v0.0.13
+v0.0.14
+v0.0.15
+v0.0.16
+v0.0.17
+v0.0.18
+v0.0.19
+v0.0.20
+v0.0.21
+v0.0.22
+v0.0.23
+v0.0.24
+v0.0.6
+v0.0.7
+v0.0.8
+v0.0.9
+v0.1.0
+v0.1.1
+v0.1.2
+v0.1.3
+v0.1.4
+v0.1.5
+v0.1.6
+v0.1.7
+v0.1.8
+v0.1.9
+v0.10.0
+v0.10.1
+v0.10.2
+v0.11.0
+v0.11.1
+v0.11.10
+v0.11.11
+v0.11.12
+v0.11.13
+v0.11.2
+v0.11.3
+v0.11.4
+v0.11.5
+v0.11.6
+v0.11.7
+v0.11.8
+v0.11.9
+v0.2.0
+v0.2.1
+v0.2.10
+v0.2.11
+v0.2.2
+v0.2.3
+v0.2.4
+v0.2.5
+v0.2.6
+v0.2.7
+v0.2.8
+v0.2.9
+v0.3.0
+v0.3.1
+v0.3.2
+v0.3.3
+v0.3.4
+v0.3.5
+v0.3.6
+v0.4.0
+v0.4.1
+v0.4.2
+v0.4.3
+v0.4.4
+v0.5.0
+v0.5.1
+v0.5.2
+v0.5.3
+v0.5.4
+v0.5.5
+v0.5.6
+v0.5.7
+v0.5.8
+v0.6.0
+v0.6.1
+v0.6.2
+v0.7.0
+v0.7.1
+v0.7.2
+v0.7.3
+v0.7.4
+v0.7.5
+v0.8.0
+v0.8.1
+v0.8.2
+v0.8.3
+v0.8.4
+v0.8.5
+v0.8.6
+v0.8.7
+v0.9.0
+v0.9.1
+v0.9.2
+v0.9.3
+v0.9.4
+v0.9.5
+v0.9.6
+v1.0.0
+v1.1.0
+v1.1.1
+v1.1.2
+v1.1.3
+v1.1.4
+v1.1.5
+v1.1.6
+v1.1.7
+v1.1.8
+v1.1.9
+v1.2.0
+v1.2.1
+v1.2.2
+
+C:\Users\Pritam>E:
+
+E:\>cd E:\Code\Java\AndroidMyProjects\flutter\flutter_app
+
+E:\Code\Java\AndroidMyProjects\flutter\flutter_app>flutter build
+'MySQL' is not recognized as an internal or external command,
+operable program or batch file.
+'MySQL' is not recognized as an internal or external command,
+operable program or batch file.
+Flutter build commands.
+
+Usage: flutter build <subcommand> [arguments]
+-h, --help    Print this usage information.
+
+Available subcommands:
+  aot         Build an ahead-of-time compiled snapshot of your app's Dart code.
+  apk         Build an Android APK file from your app.
+  appbundle   Build an Android App Bundle file from your app.
+  bundle      Build the Flutter assets directory from your app.
+  flx         Deprecated
+  ios         Build an iOS application bundle (Mac OS X host only).
+
+Run "flutter help" to see global options.
+
+E:\Code\Java\AndroidMyProjects\flutter\flutter_app>flutter build apk
+'MySQL' is not recognized as an internal or external command,
+operable program or batch file.
+'MySQL' is not recognized as an internal or external command,
+operable program or batch file.
+Initializing gradle...                                              1.5s
+Resolving dependencies...                                           7.4s
+registerResGeneratingTask is deprecated, use registerGeneratedResFolders(FileCollection)
+registerResGeneratingTask is deprecated, use registerGeneratedResFolders(FileCollection)
+registerResGeneratingTask is deprecated, use registerGeneratedResFolders(FileCollection)
+registerResGeneratingTask is deprecated, use registerGeneratedResFolders(FileCollection)
+registerResGeneratingTask is deprecated, use registerGeneratedResFolders(FileCollection)
+Note: E:\Software\AndroidStudio3\flutter_windows_v1.2.1-stable\flutter\.pub-cache\hosted\pub.dartlang.org\firebase_core-0.2.5+1\android\src\main\java\io\flutter\plugins\firebase\core\FirebaseCorePlugin.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+Calling mockable JAR artifact transform to create file: C:\Users\Pritam\.gradle\caches\transforms-1\files-1.1\android.jar\2389d2ebb50836d6a68ba635406825d7\android.jar with input E:\Software\AndroidStudio3\SDK\platforms\android-28\android.jar
+Calling mockable JAR artifact transform to create file: C:\Users\Pritam\.gradle\caches\transforms-1\files-1.1\androi
+Running Gradle task 'assembleRelease'... Done                     153.4s (!)
+Built build\app\outputs\apk\release\app-release.apk (8.3MB).
+
+E:\Code\Java\AndroidMyProjects\flutter\flutter_app>
