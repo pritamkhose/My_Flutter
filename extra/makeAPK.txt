@@ -1,0 +1,34 @@
+Microsoft Windows [Version 10.0.10240]
+(c) 2015 Microsoft Corporation. All rights reserved.
+
+E:\Code\Java\FlutterWorkspace\flutter_app>flutter build apk
+Initializing gradle...
+VMIsolate(CodeSize): 4615
+Isolate(CodeSize): 1334681
+ReadOnlyData(CodeSize): 1421744
+Instructions(CodeSize): 4372512
+Total(CodeSize): 7133552
+Built build\app\outputs\apk\release\app-release.apk (7.5MB).
+
+E:\Code\Java\FlutterWorkspace\flutter_app>
+
+
+
+
+Building a release APK
+This section describes how to build a release APK. If you completed the signing steps in the previous section, the release APK will be signed.
+
+Using the command line:
+
+cd <app dir> (replace <app dir> with your application’s directory).
+Run flutter build apk (flutter build defaults to --release).
+The release APK for your app is created at <app dir>/build/app/outputs/apk/app-release.apk.
+
+Installing a release APK on a device
+Follow these steps to install the APK built in the previous step on a connected Android device.
+
+Using the command line:
+
+Connect your Android device to your computer with a USB cable.
+cd <app dir> where <app dir> is your application directory.
+Run flutter install .

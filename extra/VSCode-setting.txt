@@ -1,0 +1,163 @@
+
+1) Make sure that the environment variables are set correctly,
+Go to “Control Panel > User Accounts > User Accounts > Change my environment variables”
+Under “User variables” check if there is an entry called “Path”: (i.e. - flutter env path.png)
+ a) set Flutter SDK Path - E:\Software\AndroidStudio\flutter_windows_v1.5.4-hotfix.2-stable\flutter\bin;
+		If the entry does exist, append the full path to flutter\bin using  ; as a separator from existing values.
+ b) set Android SDK path - E:\Software\AndroidStudio\SDK
+ c) if need set GIThub path too - C:\Program Files\Git\git-cmd.exe
+
+2) Reboot your computer - then only flutter docker work in CMD.
+
+3) Setup flutter VScode Extension as shown - (i.e. -flutter VScode extension.png)
+
+4) Connect ADB Device - Using Mobile phone via USB or run Android Emulator via Android Studio then check.
+
+---------------------------------------------------------------
+
+Microsoft Windows [Version 10.0.16299.98]
+(c) 2017 Microsoft Corporation. All rights reserved.
+
+C:\Users\Pritam>flutter --version
+Flutter 1.5.4-hotfix.2 • channel stable • https://github.com/flutter/flutter.git
+Framework • revision 7a4c33425d (12 days ago) • 2019-04-29 11:05:24 -0700
+Engine • revision 52c7a1e849
+Tools • Dart 2.3.0 (build 2.3.0-dev.0.5 a1668566e5)
+
+C:\Users\Pritam>flutter doctor
+Doctor summary (to see all details, run flutter doctor -v):
+[√] Flutter (Channel stable, v1.5.4-hotfix.2, on Microsoft Windows [Version 10.0.16299.98], locale en-IN)
+
+[√] Android toolchain - develop for Android devices (Android SDK version 28.0.3)
+[√] Android Studio (version 3.4)
+[√] VS Code (version 1.33.1)
+[√] Connected device (1 available)
+
+• No issues found!
+
+C:\Users\Pritam>flutter -v
+Manage your Flutter app development.
+
+Common commands:
+
+  flutter create <output directory>
+    Create a new Flutter project in the specified directory.
+
+  flutter run [options]
+    Run your Flutter application on an attached device or in an emulator.
+
+Usage: flutter <command> [arguments]
+
+Global options:
+-h, --help                     Print this usage information.
+-v, --verbose                  Noisy logging, including all shell commands executed.
+                               If used with --help, shows hidden options.
+
+    --quiet                    Reduce the amount of output from some commands.
+    --[no-]wrap                Toggles output word wrapping, regardless of whether or not the output is a terminal.
+                               (defaults to on)
+
+    --wrap-column              Sets the output wrap column. If not set, uses the width of the terminal. No wrapping
+                               occurs if not writing to a terminal. Use --no-wrap to turn off wrapping when connected to
+                               a terminal.
+
+-d, --device-id                Target device id or name (prefixes allowed).
+    --version                  Reports the version of this tool.
+    --machine                  When used with the --version flag, outputs the information using JSON.
+    --[no-]color               Whether to use terminal colors (requires support for ANSI escape sequences).
+                               (defaults to on)
+
+    --[no-]version-check       Allow Flutter to check for updates when this command runs.
+                               (defaults to on)
+
+    --suppress-analytics       Suppress analytics reporting when this command runs.
+    --bug-report               Captures a bug report file to submit to the Flutter team.
+                               Contains local paths, device identifiers, and log snippets.
+
+    --packages                 Path to your ".packages" file.
+                               (required, since the current directory does not contain a ".packages" file)
+
+    --flutter-root             The root directory of the Flutter repository.
+                               Defaults to $FLUTTER_ROOT if set, otherwise uses the parent of the directory that the
+                               "flutter" script itself is in.
+
+Local build selection options (not normally required):
+    --local-engine-src-path    Path to your engine src directory, if you are building Flutter locally.
+                               Defaults to $FLUTTER_ENGINE if set, otherwise defaults to the path given in your
+                               pubspec.yaml dependency_overrides for sky_engine, if any, or, failing that, tries to
+                               guess at the location based on the value of the --flutter-root option.
+
+    --local-engine             Name of a build output within the engine out directory, if you are building Flutter
+                               locally.
+                               Use this to select a specific version of the engine if you have built multiple engine
+                               targets.
+                               This path is relative to --local-engine-src-path/out.
+
+Options for testing the "flutter" tool itself:
+    --record-to                Enables recording of process invocations (including stdout and stderr of all such
+                               invocations), and file system access (reads and writes).
+                               Serializes that recording to a directory with the path specified in this flag. If the
+                               directory does not already exist, it will be created.
+
+    --replay-from              Enables mocking of process invocations by replaying their stdout, stderr, and exit code
+                               from the specified recording (obtained via --record-to). The path specified in this flag
+                               must refer to a directory that holds serialized process invocations structured according
+                               to the output of --record-to.
+
+    --show-test-device         List the special 'flutter-tester' device in device listings. This headless device is used
+                               to
+                               test Flutter tooling.
+
+Available commands:
+  analyze                  Analyze the project's Dart code.
+  attach                   Attach to a running application.
+  bash-completion          Output command line shell completion setup scripts.
+  build                    Flutter build commands.
+  channel                  List or switch flutter channels.
+  clean                    Delete the build/ and .dart_tool/ directories.
+  config                   Configure Flutter settings.
+  create                   Create a new Flutter project.
+  daemon                   Run a persistent, JSON-RPC based server to communicate with devices.
+  devices                  List all connected devices.
+  doctor                   Show information about the installed tooling.
+  drive                    Runs Flutter Driver tests for the current project.
+  emulators                List, launch and create emulators.
+  format                   Format one or more dart files.
+  help                     Display help information for flutter.
+  ide-config               Configure the IDE for use in the Flutter tree.
+  inject-plugins           Re-generates the GeneratedPluginRegistrants.
+  install                  Install a Flutter app on an attached device.
+  logs                     Show log output for running Flutter apps.
+  make-host-app-editable   Moves host apps from generated directories to non-generated directories so that they can be
+                           edited by developers.
+  packages                 Commands for managing Flutter packages.
+  precache                 Populates the Flutter tool's cache of binary artifacts.
+  run                      Run your Flutter app on an attached device.
+  screenshot               Take a screenshot from a connected device.
+  stop                     Stop your Flutter app on an attached device.
+  test                     Run Flutter unit tests for the current project.
+  trace                    Start and stop tracing for a running Flutter app.
+  update-packages          Update the packages inside the Flutter repo.
+  upgrade                  Upgrade your copy of Flutter.
+  version                  List or switch flutter versions.
+
+Run "flutter help <command>" for more information about a command.
+Run "flutter help -v" for verbose help output, including less commonly used options.
+
+C:\Users\Pritam>
+
+-------------------------------------------------------------------
+
+https://flutter.io/setup-macos/
+
+https://flutter.io/setup-windows/
+
+https://flutter.io/ios-release/
+
+https://flutter.io/using-ide-vscode/
+
+https://www.youtube.com/watch?v=BDRQxfWrozY
+
+https://flutter.io/cookbook/lists/basic-list/
+
+-------------------------------------------------------------------

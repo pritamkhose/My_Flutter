@@ -1,0 +1,44 @@
+Download latest Flutter SDK
+
+https://flutter.dev/docs/get-started/install/windows
+
+--------------------------------------------------------------
+
+Install Android Studio Android Studio
+
+Start Android Studio.
+Open plugin preferences (Preferences > Plugins on macOS, File > Settings > Plugins on Windows & Linux).
+Select Browse repositories, select the Flutter plugin and click Install.
+Click Yes when prompted to install the Dart plugin.
+Click Restart when prompted.
+
+more info - https://flutter.dev/docs/get-started/editor
+
+--------------------------------------------------------------
+
+Create the app
+Select File > New Flutter Project.
+Select Flutter application as the project type, and press Next.
+Make sure that the Flutter SDK Path text field specifies the location of the SDK. Install the SDK if you haven’t yet done so.
+Enter a project name (for example, myapp), and press Next.
+Click Finish.
+Wait for Android Studio to install the SDK, and create the project.
+
+--------------------------------------------------------------
+
+IN CMD for making without signed release APK
+
+a) Make sure that the environment variables are set correctly,
+If you wish to run Flutter commands in the regular Windows console, take these steps to add Flutter to the PATH environment variable:
+
+From the Start search bar, type ‘env’ and select Edit environment variables for your account
+Under User variables check if there is an entry called Path:
+If the entry does exist, append the full path to flutter\bin using ; as a separator from existing values.
+If the entry does not exist, create a new user variable named Path with the full path to flutter\bin as its value.
+Note that you will have to close and reopen any existing console windows for these changes to take effect.
+
+i.e. - use Reboot your computer after add path giving any issue 
+
+Follow - AndroidStudio-cmdBulidAPK.txt
+--------------------------------------------------------------
+
