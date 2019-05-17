@@ -17,6 +17,7 @@ import 'util/sms.dart';
 import 'flutternative/flutternative.dart';
 import 'samplescreen/netfilx.dart';
 import 'samplescreen/amazon.dart';
+import 'samplescreen/adidas.dart';
 //import 'video/videoplayer';
 
 // https://github.com/diegoveloper/flutter-samples
@@ -174,6 +175,13 @@ class MyAppState extends State<MyApp> {
             title: "My try Amazon clone",
             actionTap: () {
               AmazonClone();
+            },
+          ),
+          MyMenuButton(
+            // https://github.com/devefy/Flutter-Adidas-Shoes-Ecommerce-App-UI
+            title: "Adidas clone",
+            actionTap: () {
+              AdidasClone();
             },
           ),
           MyMenuButton(
