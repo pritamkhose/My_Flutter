@@ -31,7 +31,7 @@ class HomeView extends StatelessWidget {
               // color: Colors.blue,
               decoration: new BoxDecoration(
                       image: new DecorationImage(
-                        image: new AssetImage("lib/assets/starwars1.jpg"),
+                        image: new AssetImage("assets/starwars1.jpg"),
                         fit: BoxFit.fill
                         ),
                     ), // we can change to be backgroundimage instead
@@ -46,7 +46,7 @@ class HomeView extends StatelessWidget {
                           height: 50,
                           width: 50,
                          child: Image(
-                          image: AssetImage("lib/assets/netflix.png"),
+                          image: AssetImage("assets/netflix.png"),
                         )
                         ),
                         FlatButton(
@@ -144,7 +144,7 @@ class HomeView extends StatelessWidget {
             child: Text('Avalable Now', style: topMenuStyle,),          
             ),
           Container(child: Image(
-            image: new AssetImage("lib/assets/birdboxBanner.jpg"),
+            image: new AssetImage("assets/birdboxBanner.jpg"),
           ),),
           Container(
             padding: EdgeInsets.only(top: 4, bottom: 4),
@@ -229,7 +229,7 @@ class HomeView extends StatelessWidget {
         
         decoration: new BoxDecoration(
           image: new DecorationImage(
-          image: new AssetImage("lib/assets/" + counter.toString() + ".jpg"),
+          image: new AssetImage("assets/" + counter.toString() + ".jpg"),
             fit: BoxFit.fitHeight
           ),
         ),
@@ -305,7 +305,7 @@ class HomeView extends StatelessWidget {
         height: 200,
         
         child: Image(
-          image: AssetImage("lib/assets/" + counter.toString() + ".jpg"),
+          image: AssetImage("assets/" + counter.toString() + ".jpg"),
         ),
       ));
       if (counter == 12) {
@@ -330,7 +330,7 @@ class HomeView extends StatelessWidget {
             width: 100,
             decoration: new BoxDecoration(
               image: new DecorationImage(
-                image: new AssetImage("lib/assets/" + counter.toString() + ".jpg"),
+                image: new AssetImage("assets/" + counter.toString() + ".jpg"),
                   fit: BoxFit.fitHeight
                 ),
               ),
