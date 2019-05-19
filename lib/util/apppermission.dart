@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:simple_permissions/simple_permissions.dart';
+//import 'package:simple_permissions/simple_permissions.dart';
 
 // https://pub.dev/packages/simple_permissions#-readme-tab-
 // https://pub.dev/packages/permission
@@ -24,7 +24,7 @@ class MyApp extends StatefulWidget {
 
 class _MyAppState extends State<MyApp> {
   String _platformVersion = 'Unknown';
-  Permission permission;
+//  Permission permission;
 
   @override
   initState() {
@@ -34,13 +34,13 @@ class _MyAppState extends State<MyApp> {
 
   // Platform messages are asynchronous, so we initialize in an async method.
   initPlatformState() async {
-    String platformVersion;
-    // Platform messages may fail, so we use a try/catch PlatformException.
-    try {
-      platformVersion = await SimplePermissions.platformVersion;
-    } on PlatformException {
-      platformVersion = 'Failed to get platform version.';
-    }
+//    String platformVersion;
+//    // Platform messages may fail, so we use a try/catch PlatformException.
+//    try {
+//      platformVersion = await SimplePermissions.platformVersion;
+//    } on PlatformException {
+//      platformVersion = 'Failed to get platform version.';
+//    }
 
     // If the widget was removed from the tree while the asynchronous platform
     // message was in flight, we want to discard the reply rather than calling
@@ -48,7 +48,7 @@ class _MyAppState extends State<MyApp> {
     if (!mounted) return;
 
     setState(() {
-      _platformVersion = platformVersion;
+//      _platformVersion = platformVersion;
     });
   }
 
@@ -62,10 +62,10 @@ class _MyAppState extends State<MyApp> {
         body: new Center(
           child: new Column(children: <Widget>[
             new Text('Running on: $_platformVersion\n'),
-            new DropdownButton(
-                items: _getDropDownItems(),
-                value: permission,
-                onChanged: onDropDownChanged),
+//            new DropdownButton(
+//                items: _getDropDownItems(),
+//                value: permission,
+//                onChanged: onDropDownChanged),
             new RaisedButton(
                 onPressed: checkPermission,
                 child: new Text("Check permission")),
@@ -76,7 +76,7 @@ class _MyAppState extends State<MyApp> {
                 onPressed: getPermissionStatus,
                 child: new Text("Get permission status")),
             new RaisedButton(
-                onPressed: SimplePermissions.openSettings,
+//                onPressed: SimplePermissions.openSettings,
                 child: new Text("Open settings")),
             new RaisedButton(
                 onPressed: requestAllPermission,
@@ -87,43 +87,43 @@ class _MyAppState extends State<MyApp> {
     );
   }
 
-  onDropDownChanged(Permission permission) {
-    setState(() => this.permission = permission);
-    print(permission);
-  }
-
+//  onDropDownChanged(Permission permission) {
+//    setState(() => this.permission = permission);
+//    print(permission);
+//  }
+//
   requestPermission() async {
-    final res = await SimplePermissions.requestPermission(permission);
-    print("permission request result is " + res.toString());
+//    final res = await SimplePermissions.requestPermission(permission);
+//    print("permission request result is " + res.toString());
   }
-
+//
   requestAllPermission() async {
-    final res = await SimplePermissions.requestPermission(Permission.AccessCoarseLocation);
-    print("permission request result is " + res.toString());
-    final res1 = await SimplePermissions.requestPermission(Permission.SendSMS);
-    print("permission request result is " + res1.toString());
-    final res2 = await SimplePermissions.requestPermission(Permission.CallPhone);
-    print("permission request result is " + res2.toString());
-
+//    final res = await SimplePermissions.requestPermission(Permission.AccessCoarseLocation);
+//    print("permission request result is " + res.toString());
+//    final res1 = await SimplePermissions.requestPermission(Permission.SendSMS);
+//    print("permission request result is " + res1.toString());
+//    final res2 = await SimplePermissions.requestPermission(Permission.CallPhone);
+//    print("permission request result is " + res2.toString());
+//
   }
-
+//
   checkPermission() async {
-    bool res = await SimplePermissions.checkPermission(permission);
-    print("permission is " + res.toString());
+//    bool res = await SimplePermissions.checkPermission(permission);
+//    print("permission is " + res.toString());
   }
-
+//
   getPermissionStatus() async {
-    final res = await SimplePermissions.getPermissionStatus(permission);
-    print("permission status is " + res.toString());
-  }
-
-  List<DropdownMenuItem<Permission>> _getDropDownItems() {
-    List<DropdownMenuItem<Permission>> items = new List();
-    Permission.values.forEach((permission) {
-      var item = new DropdownMenuItem(
-          child: new Text(getPermissionString(permission)), value: permission);
-      items.add(item);
-    });
-    return items;
-  }
+//    final res = await SimplePermissions.getPermissionStatus(permission);
+//    print("permission status is " + res.toString());
+ }
+//
+//  List<DropdownMenuItem<Permission>> _getDropDownItems() {
+//    List<DropdownMenuItem<Permission>> items = new List();
+//    Permission.values.forEach((permission) {
+//      var item = new DropdownMenuItem(
+//          child: new Text(getPermissionString(permission)), value: permission);
+//      items.add(item);
+//    });
+//    return items;
+//  }
 }
