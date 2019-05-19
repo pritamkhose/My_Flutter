@@ -7,6 +7,7 @@ import 'flutter_default.dart';
 import 'user_listview/user_listview.dart';
 import 'myform/myform.dart';
 import 'googlemap/googlemapsample.dart';
+import 'googlemap/googlemapmarker.dart';
 import 'animations/loader.dart';
 import 'navigation/tabs.dart';
 import 'navigation/slidenavigation.dart';
@@ -14,6 +15,7 @@ import 'navigation/home_page.dart';
 import 'fcm/fcm.dart';
 import 'util/url_launcher.dart';
 import 'util/sms.dart';
+import 'util/apppermission.dart';
 import 'flutternative/flutternative.dart';
 import 'samplescreen/netfilx.dart';
 import 'samplescreen/amazon.dart';
@@ -88,9 +90,25 @@ class MyAppState extends State<MyApp> {
             },
           ),
           MyMenuButton(
+            // https://pub.dev/packages/google_maps_flutter
             title: "Google Map",
             actionTap: () {
               onButtonTap(GoogleMapSample());
+            },
+          ),
+          MyMenuButton(
+            // https://github.com/once10301/permission/blob/master/example/lib/main.dart
+            title: "App permission",
+            actionTap: () {
+              onButtonTap(AppPermission());
+            },
+          ),
+          MyMenuButton(
+            // https://medium.com/flutter-io/google-maps-and-flutter-cfb330f9a245
+            // https://github.com/flutter/plugins/tree/master/packages/google_maps_flutter/example
+            title: "Google Map Marker",
+            actionTap: () {
+              onButtonTap(GoogleMapMarker());
             },
           ),
           MyMenuButton(
