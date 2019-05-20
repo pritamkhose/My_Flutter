@@ -161,3 +161,20 @@ https://www.youtube.com/watch?v=BDRQxfWrozY
 https://flutter.io/cookbook/lists/basic-list/
 
 -------------------------------------------------------------------
+
+
+
+E:\Code\Java\FlutterWorkspace\VSCode>flutter --version
+
+E:\Code\Java\FlutterWorkspace\VSCode>flutter doctor
+
+E:\Code\Java\FlutterWorkspace\VSCode>echo %ProgramFiles%
+C:\Program Files
+
+E:\Code\Java\FlutterWorkspace\VSCode>echo %path%
+C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\PuTTY\;C:\Program Files\Git\cmd;C:\Program Files\nodejs\;E:\Software\AndroidStudio\flutter_windows_v1.5.4-hotfix.2-stable\flutter\bin;C:\Users\Pritam\AppData\Local\Microsoft\WindowsApps;C:\Users\Pritam\AppData\Local\GitHubDesktop\bin;C:\Program Files\Heroku\bin;C:\Users\Pritam\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Pritam\AppData\Roaming\npm;E:\Software\AndroidStudio\flutter_windows_v1.5.4-hotfix.2-stable\flutter\bin;
+
+E:\Code\Java\FlutterWorkspace\VSCode>setx flutter E:\Software\AndroidStudio\flutter\bin
+
+-------------------------------------------------------------------
+
