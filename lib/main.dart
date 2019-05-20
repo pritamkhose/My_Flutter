@@ -16,10 +16,12 @@ import 'fcm/fcm.dart';
 import 'util/url_launcher.dart';
 import 'util/sms.dart';
 import 'util/apppermission.dart';
+import 'util/applicationpermission.dart';
 import 'flutternative/flutternative.dart';
 import 'samplescreen/netfilx.dart';
 import 'samplescreen/amazon.dart';
 import 'samplescreen/adidas.dart';
+
 //import 'video/videoplayer';
 
 // https://github.com/diegoveloper/flutter-samples
@@ -55,7 +57,7 @@ class MyAppState extends State<MyApp> {
       appBar: AppBar(
         title: Text("Flutter Samples"),
       ),
-     // body: getBody(),
+      // body: getBody(),
       body: WillPopScope(child: getBody(), onWillPop: onWillPop),
     );
   }
@@ -97,10 +99,21 @@ class MyAppState extends State<MyApp> {
             },
           ),
           MyMenuButton(
+            // https://pub.dev/packages/simple_permissions#-readme-tab-
+            // https://github.com/tamcy/simple_permissions
+            // https://pub.dev/packages/permission
             // https://github.com/once10301/permission/blob/master/example/lib/main.dart
             title: "App permission",
             actionTap: () {
               onButtonTap(AppPermission());
+            },
+          ),
+          MyMenuButton(
+            // https://pub.dev/packages/permission_handler#-installing-tab-
+            // https://github.com/BaseflowIT/flutter-permission-handler/blob/develop/example/lib/main.dart
+            title: "Application permission",
+            actionTap: () {
+              onButtonTap(ApplicationPermission());
             },
           ),
           MyMenuButton(
@@ -204,11 +217,12 @@ class MyAppState extends State<MyApp> {
           ),
           MyMenuButton(
             // https://github.com/frideosapps/data_examples
+            // https://medium.com/flutter-community/simple-ways-to-pass-to-and-share-data-with-widgets-pages-f8988534bd5b
             title: "Intent data send example",
             actionTap: () {
               // DataExamples();
             },
-          )
+          ),
         ],
       ),
     );
