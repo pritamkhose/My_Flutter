@@ -10,7 +10,7 @@ class GoogleMapMarker extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Google Maps Demo',
-      home: MyApp (),
+      home: MyApp(),
     );
   }
 }
@@ -21,45 +21,29 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  Completer<GoogleMapController> _controller = Completer();
+  GoogleMapController mapController;
 
-  static const LatLng _center = const LatLng(45.521563, -122.677433);
+  MapType _currentMapType = MapType.normal;
+  int _countMapType = 0;
+
+  final LatLng _center = const LatLng(
+      18.565217710414974, 73.81910808384418); //LatLng(45.521563, -122.677433);
+
+  LatLng _lastMapPosition;
 
   final Set<Marker> _markers = {};
 
-  LatLng _lastMapPosition = _center;
-
-  MapType _currentMapType = MapType.normal;
-
-  void _onMapTypeButtonPressed() {
-    setState(() {
-      _currentMapType = _currentMapType == MapType.normal
-          ? MapType.satellite
-          : MapType.normal;
-    });
-  }
-
-  void _onAddMarkerButtonPressed() {
-    setState(() {
-      _markers.add(Marker(
-        // This marker id can be anything that uniquely identifies each marker.
-        markerId: MarkerId(_lastMapPosition.toString()),
-        position: _lastMapPosition,
-        infoWindow: InfoWindow(
-          title: 'Really cool place',
-          snippet: '5 Star Rating',
-        ),
-        icon: BitmapDescriptor.defaultMarker,
-      ));
-    });
+  void _onMapCreated(GoogleMapController controller) {
+    mapController = controller;
+    _lastMapPosition = _center;
   }
 
   void _onCameraMove(CameraPosition position) {
+    print('_onCameraMove --> ' +
+        position.target.latitude.toString() +
+        ' - ' +
+        position.target.longitude.toString());
     _lastMapPosition = position.target;
-  }
-
-  void _onMapCreated(GoogleMapController controller) {
-    _controller.complete(controller);
   }
 
   @override
@@ -70,44 +54,80 @@ class _MyAppState extends State<MyApp> {
           title: Text('Maps Sample App'),
           backgroundColor: Colors.green[700],
         ),
-        body: Stack(
-          children: <Widget>[
-            GoogleMap(
-              onMapCreated: _onMapCreated,
-              initialCameraPosition: CameraPosition(
-                target: _center,
-                zoom: 11.0,
-              ),
-              mapType: _currentMapType,
-              markers: _markers,
-              onCameraMove: _onCameraMove,
+        body: Stack(children: <Widget>[
+          GoogleMap(
+            onMapCreated: _onMapCreated,
+            initialCameraPosition: CameraPosition(
+              target: _center,
+              zoom: 12.0,
             ),
-            Padding(
-              padding: const EdgeInsets.all(16.0),
-              child: Align(
-                alignment: Alignment.topRight,
-                child: Column(
-                  children: <Widget> [
-                    FloatingActionButton(
-                      onPressed: _onMapTypeButtonPressed,
-                      materialTapTargetSize: MaterialTapTargetSize.padded,
-                      backgroundColor: Colors.green,
-                      child: const Icon(Icons.map, size: 36.0),
-                    ),
-                    SizedBox(height: 16.0),
-                    FloatingActionButton(
-                      onPressed: _onAddMarkerButtonPressed,
-                      materialTapTargetSize: MaterialTapTargetSize.padded,
-                      backgroundColor: Colors.green,
-                      child: const Icon(Icons.add_location, size: 36.0),
-                    ),
-                  ],
-                ),
-              ),
-            ),
-          ],
-        ),
+            mapType: _currentMapType,
+            markers: _markers,
+            onCameraMove: _onCameraMove,
+            scrollGesturesEnabled: true,
+            rotateGesturesEnabled: true,
+            tiltGesturesEnabled: true,
+            zoomGesturesEnabled: true,
+            myLocationEnabled: true,
+            compassEnabled: true,
+            onTap: _handleTap,
+          ),
+          Padding(
+            padding: const EdgeInsets.all(16.0),
+            child: Align(
+                alignment: Alignment.bottomLeft,
+                child: FloatingActionButton(
+                  onPressed: _onMapTypeButtonPressed,
+                  tooltip: 'Map Type',
+                  child: Icon(Icons.map),
+                )),
+          ),
+        ]),
       ),
     );
+  }
+
+  void _onMapTypeButtonPressed() {
+    setState(() {
+//      _currentMapType = _currentMapType == MapType.normal
+//          ? MapType.satellite
+//          : MapType.normal;
+      _countMapType = _countMapType + 1;
+      if (_countMapType == 5) {
+        _countMapType = 1;
+      }
+      if (_countMapType == 1) {
+        _currentMapType = MapType.normal;
+      } else if (_countMapType == 2) {
+        _currentMapType = MapType.satellite;
+      } else if (_countMapType == 3) {
+        _currentMapType = MapType.hybrid;
+      } else if (_countMapType == 4) {
+        _currentMapType = MapType.terrain;
+      }
+      print('_onMapTypeButtonPressed --> ' +
+          _countMapType.toString() +
+          ' ' +
+          _currentMapType.toString());
+    });
+  }
+
+  void _handleTap(LatLng point) {
+    print('_onAddMarkerButtonPressed');
+    setState(() {
+      _lastMapPosition = point;
+      _markers.add(Marker(
+        // This marker id can be anything that uniquely identifies each marker.
+        markerId: MarkerId(_lastMapPosition.toString()),
+        position: _lastMapPosition,
+        infoWindow: InfoWindow(
+          title: 'Marker place',
+          snippet: _lastMapPosition.latitude.toString() +
+              ' - ' +
+              _lastMapPosition.longitude.toString(),
+        ),
+        icon: BitmapDescriptor.defaultMarker,
+      ));
+    });
   }
 }

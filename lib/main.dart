@@ -28,6 +28,7 @@ import 'samplescreen/adidas.dart';
 // https://flutter.dev/docs/cookbook/lists/basic-list
 // https://pub.dartlang.org/packages/toast
 // https://pub.dartlang.org/flutter/packages
+// https://flutter.dev/docs/development/packages-and-plugins/androidx-compatibility
 
 void main() => runApp(MaterialApp(
       theme: ThemeData(
@@ -99,15 +100,27 @@ class MyAppState extends State<MyApp> {
             },
           ),
           MyMenuButton(
-            // https://pub.dev/packages/simple_permissions#-readme-tab-
-            // https://github.com/tamcy/simple_permissions
-            // https://pub.dev/packages/permission
-            // https://github.com/once10301/permission/blob/master/example/lib/main.dart
-            title: "App permission",
+            // https://medium.com/flutter-io/google-maps-and-flutter-cfb330f9a245
+            // https://github.com/flutter/plugins/tree/master/packages/google_maps_flutter/example
+            // https://pub.dev/packages/google_maps_flutter
+            // https://codelabs.developers.google.com/codelabs/google-maps-in-flutter/#3
+            // https://medium.com/flutterpub/flutter-and-google-maps-2b4e332e24ec
+            // https://medium.com/flutter-community/exploring-google-maps-in-flutter-8a86d3783d24
+            title: "Google Map Marker",
             actionTap: () {
-              onButtonTap(AppPermission());
+              onButtonTap(GoogleMapMarker());
             },
           ),
+//          MyMenuButton(
+//            // https://pub.dev/packages/simple_permissions#-readme-tab-
+//            // https://github.com/tamcy/simple_permissions
+//            // https://pub.dev/packages/permission
+//            // https://github.com/once10301/permission/blob/master/example/lib/main.dart
+//            title: "App permission",
+//            actionTap: () {
+//              onButtonTap(AppPermission());
+//            },
+//          ),
           MyMenuButton(
             // https://pub.dev/packages/permission_handler#-installing-tab-
             // https://github.com/BaseflowIT/flutter-permission-handler/blob/develop/example/lib/main.dart
@@ -116,20 +129,12 @@ class MyAppState extends State<MyApp> {
               onButtonTap(ApplicationPermission());
             },
           ),
-          MyMenuButton(
-            // https://medium.com/flutter-io/google-maps-and-flutter-cfb330f9a245
-            // https://github.com/flutter/plugins/tree/master/packages/google_maps_flutter/example
-            title: "Google Map Marker",
-            actionTap: () {
-              onButtonTap(GoogleMapMarker());
-            },
-          ),
-          MyMenuButton(
-            title: "Video Player",
-            actionTap: () {
-              // onButtonTap(VideoApp());
-            },
-          ),
+//          MyMenuButton(
+//            title: "Video Player",
+//            actionTap: () {
+//              // onButtonTap(VideoApp());
+//            },
+//          ),
           MyMenuButton(
             title: "Flutter Animations",
             actionTap: () {
