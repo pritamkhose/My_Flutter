@@ -21,7 +21,8 @@ import 'flutternative/flutternative.dart';
 import 'samplescreen/netfilx.dart';
 import 'samplescreen/amazon.dart';
 import 'samplescreen/adidas.dart';
-
+import 'fileexploer/reading-writing-file.dart';
+import 'shared_preferences/app_shared_preferences.dart';
 //import 'video/videoplayer';
 
 // https://github.com/diegoveloper/flutter-samples
@@ -29,6 +30,7 @@ import 'samplescreen/adidas.dart';
 // https://pub.dartlang.org/packages/toast
 // https://pub.dartlang.org/flutter/packages
 // https://flutter.dev/docs/development/packages-and-plugins/androidx-compatibility
+// https://github.com/Solido/awesome-flutter
 
 void main() => runApp(MaterialApp(
       theme: ThemeData(
@@ -198,6 +200,23 @@ class MyAppState extends State<MyApp> {
             title: "Flutter Native Communication",
             actionTap: () {
               FlutterNative();
+            },
+          ),
+          MyMenuButton(
+            // https://pub.dev/packages/path_provider
+            // https://flutter.dev/docs/cookbook/persistence/reading-writing-files
+            title: "File Exploer",
+            actionTap: () {
+              FlutterFileExploer();
+            },
+          ),
+          MyMenuButton(
+            // https://pub.dev/packages/shared_preferences
+            // https://medium.com/flutter-community/shared-preferences-how-to-save-flutter-application-settings-and-user-preferences-for-later-554d08671ae9
+            // https://medium.com/@vignesh_prakash/flutter-sharedpreferences-8622bb32abf9
+            title: "Shared Preferences",
+            actionTap: () {
+              AppSharedPreferences();
             },
           ),
           MyMenuButton(
