@@ -35,6 +35,8 @@ dependencies:
   permission_handler: ^3.0.2
   english_words: ^3.1.0
 #  cloud_firestore: ^0.8.2
+  path_provider: ^1.1.0
+  shared_preferences: ^0.5.2
 
 dev_dependencies:
   flutter_test:
