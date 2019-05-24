@@ -1,6 +1,61 @@
 Microsoft Windows [Version 10.0.16299.98]
 (c) 2017 Microsoft Corporation. All rights reserved.
 
+E:\Code\Java\FlutterWorkspace\my_flutter\my_flutter>flutter doctor
+Doctor summary (to see all details, run flutter doctor -v):
+[√] Flutter (Channel stable, v1.5.4-hotfix.2, on Microsoft Windows [Version 10.0.16299.98], locale en-IN)
+
+[√] Android toolchain - develop for Android devices (Android SDK version 28.0.3)
+[√] Android Studio (version 3.4)
+[√] VS Code (version 1.34.0)
+[√] Connected device (1 available)
+
+• No issues found!
+
+E:\Code\Java\FlutterWorkspace\my_flutter\my_flutter>flutter clean
+Deleting 'build\'.
+Deleting 'E:\Code\Java\FlutterWorkspace\my_flutter\my_flutter\.dart_tool\'.
+
+E:\Code\Java\FlutterWorkspace\my_flutter\my_flutter>flutter clean
+Deleting 'build\'.
+Deleting 'E:\Code\Java\FlutterWorkspace\my_flutter\my_flutter\.dart_tool\'.
+
+E:\Code\Java\FlutterWorkspace\my_flutter\my_flutter>flutter build apk
+Initializing gradle...                                              0.9s
+Resolving dependencies...                                           6.1s
+registerResGeneratingTask is deprecated, use registerGeneratedResFolders(FileCollection)
+registerResGeneratingTask is deprecated, use registerGeneratedResFolders(FileCollection)
+registerResGeneratingTask is deprecated, use registerGeneratedResFolders(FileCollection)
+registerResGeneratingTask is deprecated, use registerGeneratedResFolders(FileCollection)
+registerResGeneratingTask is deprecated, use registerGeneratedResFolders(FileCollection)
+Note: E:\Software\AndroidStudio\flutter\.pub-cache\hosted\pub.dartlang.org\firebase_messaging-4.0.0+1\android\src\main\java\io\flutter\plugins\firebasemessaging\FlutterFirebaseInstanceIDService.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+Note: E:\Software\AndroidStudio\flutter\.pub-cache\hosted\pub.dartlang.org\fluttertoast-3.0.3\android\src\main\java\io\github\ponnamkarthik\toast\fluttertoast\FluttertoastPlugin.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+Note: Some input files use unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+Running Gradle task 'assembleRelease'...
+
+Running Gradle task 'assembleRelease'... Done                     198.0s (!)
+Built build\app\outputs\apk\release\app-release.apk (14.5MB).
+
+E:\Code\Java\FlutterWorkspace\my_flutter\my_flutter>
+
+---------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+Microsoft Windows [Version 10.0.16299.98]
+(c) 2017 Microsoft Corporation. All rights reserved.
+
 E:\Code\Java\FlutterWorkspace\VSCode\myapk>flutter --version
 Flutter 1.5.4-hotfix.2 • channel stable • https://github.com/flutter/flutter.git
 Framework • revision 7a4c33425d (4 weeks ago) • 2019-04-29 11:05:24 -0700
