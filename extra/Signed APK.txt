@@ -1,0 +1,175 @@
+Microsoft Windows [Version 10.0.16299.98]
+(c) 2017 Microsoft Corporation. All rights reserved.
+
+E:\Code\Java\FlutterWorkspace\VSCode\myapk>flutter --version
+Flutter 1.5.4-hotfix.2 • channel stable • https://github.com/flutter/flutter.git
+Framework • revision 7a4c33425d (4 weeks ago) • 2019-04-29 11:05:24 -0700
+Engine • revision 52c7a1e849
+Tools • Dart 2.3.0 (build 2.3.0-dev.0.5 a1668566e5)
+
+
+E:\Code\Java\FlutterWorkspace\VSCode>flutter doctor
+Doctor summary (to see all details, run flutter doctor -v):
+[√] Flutter (Channel stable, v1.5.4-hotfix.2, on Microsoft Windows [Version 10.0.16299.98], locale en-IN)
+
+[√] Android toolchain - develop for Android devices (Android SDK version 28.0.3)
+[√] Android Studio (version 3.4)
+[√] VS Code (version 1.34.0)
+[!] Connected device
+    ! No devices available
+
+! Doctor found issues in 1 category.
+
+E:\Code\Java\FlutterWorkspace\VSCode\myapk>flutter doctor
+Doctor summary (to see all details, run flutter doctor -v):
+[√] Flutter (Channel stable, v1.5.4-hotfix.2, on Microsoft Windows [Version 10.0.16299.98], locale en-IN)
+
+[√] Android toolchain - develop for Android devices (Android SDK version 28.0.3)
+[√] Android Studio (version 3.4)
+[√] VS Code (version 1.34.0)
+[√] Connected device (1 available)
+
+• No issues found!
+
+E:\Code\Java\FlutterWorkspace\VSCode>flutter create myapk
+Creating project myapk...
+  myapk\.gitignore (created)
+  myapk\.idea\libraries\Dart_SDK.xml (created)
+  myapk\.idea\libraries\Flutter_for_Android.xml (created)
+  myapk\.idea\libraries\KotlinJavaRuntime.xml (created)
+  myapk\.idea\modules.xml (created)
+  myapk\.idea\runConfigurations\main_dart.xml (created)
+  myapk\.idea\workspace.xml (created)
+  myapk\.metadata (created)
+  myapk\android\app\build.gradle (created)
+  myapk\android\app\src\main\java\com\example\myapk\MainActivity.java (created)
+  myapk\android\build.gradle (created)
+  myapk\android\myapk_android.iml (created)
+  myapk\android\app\src\debug\AndroidManifest.xml (created)
+  myapk\android\app\src\main\AndroidManifest.xml (created)
+  myapk\android\app\src\main\res\drawable\launch_background.xml (created)
+  myapk\android\app\src\main\res\mipmap-hdpi\ic_launcher.png (created)
+  myapk\android\app\src\main\res\mipmap-mdpi\ic_launcher.png (created)
+  myapk\android\app\src\main\res\mipmap-xhdpi\ic_launcher.png (created)
+  myapk\android\app\src\main\res\mipmap-xxhdpi\ic_launcher.png (created)
+  myapk\android\app\src\main\res\mipmap-xxxhdpi\ic_launcher.png (created)
+  myapk\android\app\src\main\res\values\styles.xml (created)
+  myapk\android\app\src\profile\AndroidManifest.xml (created)
+  myapk\android\gradle\wrapper\gradle-wrapper.properties (created)
+  myapk\android\gradle.properties (created)
+  myapk\android\settings.gradle (created)
+  myapk\ios\Runner\AppDelegate.h (created)
+  myapk\ios\Runner\AppDelegate.m (created)
+  myapk\ios\Runner\main.m (created)
+  myapk\ios\Runner.xcodeproj\project.pbxproj (created)
+  myapk\ios\Runner.xcodeproj\xcshareddata\xcschemes\Runner.xcscheme (created)
+  myapk\ios\Flutter\AppFrameworkInfo.plist (created)
+  myapk\ios\Flutter\Debug.xcconfig (created)
+  myapk\ios\Flutter\Release.xcconfig (created)
+  myapk\ios\Runner\Assets.xcassets\AppIcon.appiconset\Contents.json (created)
+  myapk\ios\Runner\Assets.xcassets\AppIcon.appiconset\Icon-App-1024x1024@1x.png (created)
+  myapk\ios\Runner\Assets.xcassets\AppIcon.appiconset\Icon-App-20x20@1x.png (created)
+  myapk\ios\Runner\Assets.xcassets\AppIcon.appiconset\Icon-App-20x20@2x.png (created)
+  myapk\ios\Runner\Assets.xcassets\AppIcon.appiconset\Icon-App-20x20@3x.png (created)
+  myapk\ios\Runner\Assets.xcassets\AppIcon.appiconset\Icon-App-29x29@1x.png (created)
+  myapk\ios\Runner\Assets.xcassets\AppIcon.appiconset\Icon-App-29x29@2x.png (created)
+  myapk\ios\Runner\Assets.xcassets\AppIcon.appiconset\Icon-App-29x29@3x.png (created)
+  myapk\ios\Runner\Assets.xcassets\AppIcon.appiconset\Icon-App-40x40@1x.png (created)
+  myapk\ios\Runner\Assets.xcassets\AppIcon.appiconset\Icon-App-40x40@2x.png (created)
+  myapk\ios\Runner\Assets.xcassets\AppIcon.appiconset\Icon-App-40x40@3x.png (created)
+  myapk\ios\Runner\Assets.xcassets\AppIcon.appiconset\Icon-App-60x60@2x.png (created)
+  myapk\ios\Runner\Assets.xcassets\AppIcon.appiconset\Icon-App-60x60@3x.png (created)
+  myapk\ios\Runner\Assets.xcassets\AppIcon.appiconset\Icon-App-76x76@1x.png (created)
+  myapk\ios\Runner\Assets.xcassets\AppIcon.appiconset\Icon-App-76x76@2x.png (created)
+  myapk\ios\Runner\Assets.xcassets\AppIcon.appiconset\Icon-App-83.5x83.5@2x.png (created)
+  myapk\ios\Runner\Assets.xcassets\LaunchImage.imageset\Contents.json (created)
+  myapk\ios\Runner\Assets.xcassets\LaunchImage.imageset\LaunchImage.png (created)
+  myapk\ios\Runner\Assets.xcassets\LaunchImage.imageset\LaunchImage@2x.png (created)
+  myapk\ios\Runner\Assets.xcassets\LaunchImage.imageset\LaunchImage@3x.png (created)
+  myapk\ios\Runner\Assets.xcassets\LaunchImage.imageset\README.md (created)
+  myapk\ios\Runner\Base.lproj\LaunchScreen.storyboard (created)
+  myapk\ios\Runner\Base.lproj\Main.storyboard (created)
+  myapk\ios\Runner\Info.plist (created)
+  myapk\ios\Runner.xcodeproj\project.xcworkspace\contents.xcworkspacedata (created)
+  myapk\ios\Runner.xcworkspace\contents.xcworkspacedata (created)
+  myapk\lib\main.dart (created)
+  myapk\myapk.iml (created)
+  myapk\pubspec.yaml (created)
+  myapk\README.md (created)
+  myapk\test\widget_test.dart (created)
+Running "flutter packages get" in myapk...                          9.9s
+Wrote 66 files.
+
+All done!
+[√] Flutter is fully installed. (Channel stable, v1.5.4-hotfix.2, on Microsoft Windows [Version 10.0.16299.98], locale en-IN)
+[√] Android toolchain - develop for Android devices is fully installed. (Android SDK version 28.0.3)
+[√] Android Studio is fully installed. (version 3.4)
+[√] VS Code is fully installed. (version 1.34.0)
+[!] Connected device is not available.
+
+Run "flutter doctor" for information about installing additional components.
+
+In order to run your application, type:
+
+  $ cd myapk
+  $ flutter run
+
+Your application code is in myapk\lib\main.dart.
+
+
+E:\Code\Java\FlutterWorkspace\VSCode>cd myapk
+
+
+E:\Code\Java\FlutterWorkspace\VSCode\myapk>flutter build apk
+Initializing gradle...                                             11.9s
+Resolving dependencies...                                          61.7s
+Running Gradle task 'assembleRelease'...
+Running Gradle task 'assembleRelease'... Done                      73.1s
+Built build\app\outputs\apk\release\app-release.apk (4.9MB).
+
+E:\Code\Java\FlutterWorkspace\VSCode\myapk>flutter run
+Using hardware rendering with device Android SDK built for x86. If you get graphics artifacts, consider enabling software rendering with
+"--enable-software-rendering".
+Launching lib/main.dart on Android SDK built for x86 in debug mode...
+Initializing gradle...                                              1.0s
+Resolving dependencies...                                           4.2s
+Running Gradle task 'assembleDebug'...
+Running Gradle task 'assembleDebug'... Done                        30.9s
+Built build\app\outputs\apk\debug\app-debug.apk.
+Installing build\app\outputs\apk\app.apk...                         3.7s
+I/OpenGLRenderer(18624): Davey! duration=2097ms; Flags=1, IntendedVsync=23006108360821, Vsync=23006658360799, OldestInputEvent=9223372036854775807, NewestInputEvent=0, HandleInputStart=23006670838100, AnimationStart=23006670974530, PerformTraversalsStart=23006671025420, DrawStart=23006704447490, SyncQueued=23006732345120, SyncStart=23006783065390, IssueDrawCommandsStart=23006783363470, SwapBuffers=23007336846610,
+FrameCompleted=23008256920940, DequeueBufferDuration=27847000, QueueBufferDuration=20150000,
+D/EGL_emulation(18624): eglMakeCurrent: 0xe506af20: ver 3 0 (tinfo 0xe6250b00)
+Syncing files to device Android SDK built for x86...
+ 3,154ms (!)
+
+🔥  To hot reload changes while running, press "r". To hot restart (and rebuild state), press "R".
+An Observatory debugger and profiler on Android SDK built for x86 is available at: http://127.0.0.1:64048/rKkwaT6AnYw=/
+For a more detailed help message, press "h". To detach, press "d"; to quit, press "q".
+
+Application finished.
+
+E:\Code\Java\FlutterWorkspace\VSCode\myapk>flutter clean
+Deleting 'build\'.
+Deleting 'E:\Code\Java\FlutterWorkspace\VSCode\myapk\.dart_tool\'.
+
+E:\Code\Java\FlutterWorkspace\VSCode\myapk>flutter build apk --release
+Initializing gradle...                                              9.2s
+Resolving dependencies...                                           4.7s
+Running Gradle task 'assembleRelease'...
+Running Gradle task 'assembleRelease'... Done                      51.8s
+Built build\app\outputs\apk\release\app-release.apk (4.9MB).
+
+E:\Code\Java\FlutterWorkspace\VSCode\myapk>flutter install
+Initializing gradle...                                              1.2s
+Resolving dependencies...                                           3.6s
+Installing app.apk to Android SDK built for x86...
+Installing build\app\outputs\apk\app.apk...                         1.0s
+Error: ADB exited with exit code 1
+Performing Streamed Install
+
+adb: failed to install E:\Code\Java\FlutterWorkspace\VSCode\myapk\build\app\outputs\apk\app.apk: Failure [INSTALL_FAILED_NO_MATCHING_ABIS:
+Failed to extract native libraries, res=-113]
+Install failed
+
+E:\Code\Java\FlutterWorkspace\VSCode\myapk>

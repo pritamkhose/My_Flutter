@@ -22,7 +22,9 @@ import 'samplescreen/netfilx.dart';
 import 'samplescreen/amazon.dart';
 import 'samplescreen/adidas.dart';
 import 'fileexploer/reading-writing-file.dart';
+import 'fileexploer/filepicker.dart';
 import 'shared_preferences/app_shared_preferences.dart';
+import 'qr/qrscanner.dart';
 //import 'video/videoplayer';
 
 // https://github.com/diegoveloper/flutter-samples
@@ -205,10 +207,32 @@ class MyAppState extends State<MyApp> {
           MyMenuButton(
             // https://pub.dev/packages/path_provider
             // https://flutter.dev/docs/cookbook/persistence/reading-writing-files
-            title: "File Exploer",
+            title: "File Editor internal storage",
             actionTap: () {
               FlutterFileExploer();
             },
+          ),
+          MyMenuButton(
+            // https://github.com/miguelpruivo/plugins_flutter_file_picker/blob/master/example/lib/main.dart
+            title: "File Picker",
+            actionTap: () {
+              FlutterFilePicker();
+            },
+          ),
+          MyMenuButton(
+            // https://pub.dev/packages/qr_flutter
+            //https://medium.com/flutter-community/building-flutter-qr-code-generator-scanner-and-sharing-app-703e73b228d3
+            //https://github.com/alfianlosari/flutter_qr_code_scanner_generator_sharing
+            //https://pub.dev/packages/barcode_scan#-installing-tab-
+            //https://pub.dev/packages/fast_qr_reader_view
+            title: "QR Code",
+            actionTap: () {
+              QRCodeScanner();
+            },
+            //Extra
+            //https://pub.dev/packages/qr_code_scanner#-readme-tab-
+            //https://pub.dev/packages?q=qr
+            //https://github.com/swissonid/BarcodeScannerPlugin
           ),
           MyMenuButton(
             // https://pub.dev/packages/shared_preferences
