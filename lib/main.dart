@@ -25,7 +25,8 @@ import 'fileexploer/reading-writing-file.dart';
 import 'fileexploer/filepicker.dart';
 import 'shared_preferences/app_shared_preferences.dart';
 import 'qr/qrscanner.dart';
-//import 'video/videoplayer';
+// import 'video/videoplayer.dart';
+import 'video/chewievideoplayer.dart';
 
 // https://github.com/diegoveloper/flutter-samples
 // https://flutter.dev/docs/cookbook/lists/basic-list
@@ -133,12 +134,17 @@ class MyAppState extends State<MyApp> {
               onButtonTap(ApplicationPermission());
             },
           ),
-//          MyMenuButton(
-//            title: "Video Player",
-//            actionTap: () {
-//              // onButtonTap(VideoApp());
-//            },
-//          ),
+          MyMenuButton(
+            // https://github.com/flutter/plugins/blob/master/packages/video_player/example/lib/main.dart
+            // https://pub.dartlang.org/packages/video_player#-installing-tab-
+            // https://github.com/tensor-programming/flutter_videoplayer_example/blob/master/lib/main.dart
+            // https://github.com/brianegan/chewie
+            // https://pub.dev/packages/chewie#-installing-tab-
+            title: "Video Player chewie",
+            actionTap: () {
+              MyVideoPlayerScreen();
+            },
+          ),
           MyMenuButton(
             title: "Flutter Animations",
             actionTap: () {
