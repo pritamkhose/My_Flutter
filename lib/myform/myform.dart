@@ -5,6 +5,7 @@ import 'package:http/http.dart' as http;
 
 import 'data.dart';
 import 'myeditform.dart';
+import 'sampleform.dart';
 
 class MyForm extends StatefulWidget {
   @override
@@ -30,6 +31,15 @@ class _MyFormState extends State<MyForm> {
             icon: new Icon(Icons.refresh),
             onPressed: () {
               _fetchData();
+            },
+          ),
+          IconButton(
+            icon: new Icon(Icons.menu),
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => SampleForm()),
+              );
             },
           ),
         ],
