@@ -25,7 +25,6 @@ import 'fileexploer/reading-writing-file.dart';
 import 'fileexploer/filepicker.dart';
 import 'shared_preferences/app_shared_preferences.dart';
 import 'qr/qrscanner.dart';
-// import 'video/videoplayer.dart';
 import 'video/chewievideoplayer.dart';
 
 // https://github.com/diegoveloper/flutter-samples
@@ -34,6 +33,7 @@ import 'video/chewievideoplayer.dart';
 // https://pub.dartlang.org/flutter/packages
 // https://flutter.dev/docs/development/packages-and-plugins/androidx-compatibility
 // https://github.com/Solido/awesome-flutter
+// https://github.com/flutter/plugins
 
 void main() => runApp(MaterialApp(
       theme: ThemeData(
