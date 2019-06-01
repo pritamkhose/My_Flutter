@@ -1,34 +1,81 @@
-Microsoft Windows [Version 10.0.10240]
-(c) 2015 Microsoft Corporation. All rights reserved.
+Microsoft Windows [Version 10.0.16299.98]
+(c) 2017 Microsoft Corporation. All rights reserved.
 
-E:\Code\Java\FlutterWorkspace\flutter_app>flutter build apk
-Initializing gradle...
-VMIsolate(CodeSize): 4615
-Isolate(CodeSize): 1334681
-ReadOnlyData(CodeSize): 1421744
-Instructions(CodeSize): 4372512
-Total(CodeSize): 7133552
-Built build\app\outputs\apk\release\app-release.apk (7.5MB).
+E:\Code\Java\FlutterWorkspace\my_flutter\my_flutter>flutter clean
+Deleting 'build\'.
+Deleting 'E:\Code\Java\FlutterWorkspace\my_flutter\my_flutter\.dart_tool\'.
 
-E:\Code\Java\FlutterWorkspace\flutter_app>
+E:\Code\Java\FlutterWorkspace\my_flutter\my_flutter>flutter build apk
+Initializing gradle...                                              1.2s
+Resolving dependencies...                                           6.3s
+registerResGeneratingTask is deprecated, use registerGeneratedResFolders(FileCollection)
+registerResGeneratingTask is deprecated, use registerGeneratedResFolders(FileCollection)
+registerResGeneratingTask is deprecated, use registerGeneratedResFolders(FileCollection)
+registerResGeneratingTask is deprecated, use registerGeneratedResFolders(FileCollection)
+registerResGeneratingTask is deprecated, use registerGeneratedResFolders(FileCollection)
+Note: E:\Software\AndroidStudio\flutter\.pub-cache\hosted\pub.dartlang.org\firebase_messaging-4.0.0+1\android\src\main\java\io\flutter\plugins\firebasemessaging\FlutterFirebaseInstanceID
+Service.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+Note: E:\Software\AndroidStudio\flutter\.pub-cache\hosted\pub.dartlang.org\fluttertoast-3.0.3\android\src\main\java\io\github\ponnamkarthik\toast\fluttertoast\FluttertoastPlugin.java use
+s or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+Note: Some input files use unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+Running Gradle task 'assembleRelease'...                                                                                  Calling mockable JAR artifact transform to create file: C:\Users
+\Pritam\.gradle\caches\transforms-2\files-2.1\0b76761a783182e290a7144f9bc887c2\android.jar with input E:\Software\AndroidStudio\SDK\platforms\android-28\android.jar
+Running Gradle task 'assembleRelease'...
+Running Gradle task 'assembleRelease'... Done                     301.5s (!)
+Built build\app\outputs\apk\release\app-release.apk (15.4MB).
 
+E:\Code\Java\FlutterWorkspace\my_flutter\my_flutter>flutter install
+Initializing gradle...                                              1.3s
+Resolving dependencies...                                           6.5s
+Installing app.apk to Android SDK built for x86...
+Uninstalling old version...
+Installing build\app\outputs\apk\app.apk...                         2.0s
+Error: ADB exited with exit code 1
+Performing Streamed Install
 
+adb: failed to install E:\Code\Java\FlutterWorkspace\my_flutter\my_flutter\build\app\outputs\apk\app.apk: Failure [INSTALL_FAILED_NO_MATCHING_ABIS: Failed to extract native libraries,
+res=-113]
+Install failed
 
+E:\Code\Java\FlutterWorkspace\my_flutter\my_flutter>flutter run
+Using hardware rendering with device Android SDK built for x86. If you get graphics artifacts, consider enabling software rendering with "--enable-software-rendering".
+Launching lib/main.dart on Android SDK built for x86 in debug mode...
+Initializing gradle...                                              1.0s
+Resolving dependencies...                                           5.1s
+registerResGeneratingTask is deprecated, use registerGeneratedResFolders(FileCollection)
+registerResGeneratingTask is deprecated, use registerGeneratedResFolders(FileCollection)
+registerResGeneratingTask is deprecated, use registerGeneratedResFolders(FileCollection)
+registerResGeneratingTask is deprecated, use registerGeneratedResFolders(FileCollection)
+registerResGeneratingTask is deprecated, use registerGeneratedResFolders(FileCollection)
+Note: E:\Software\AndroidStudio\flutter\.pub-cache\hosted\pub.dartlang.org\firebase_messaging-4.0.0+1\android\src\main\java\io\flutter\plugins\firebasemessaging\FlutterFirebaseInstanceID
+Service.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+Note: E:\Software\AndroidStudio\flutter\.pub-cache\hosted\pub.dartlang.org\fluttertoast-3.0.3\android\src\main\java\io\github\ponnamkarthik\toast\fluttertoast\FluttertoastPlugin.java use
+s or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+Note: Some input files use unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+Running Gradle task 'assembleDebug'...
 
-Building a release APK
-This section describes how to build a release APK. If you completed the signing steps in the previous section, the release APK will be signed.
+Running Gradle task 'assembleDebug'... Done                       132.5s (!)
+Built build\app\outputs\apk\debug\app-debug.apk.
+Installing build\app\outputs\apk\app.apk...                         2.9s
+I/Choreographer(10890): Skipped 184 frames!  The application may be doing too much work on its main thread.
+D/EGL_emulation(10890): eglMakeCurrent: 0xe628c1c0: ver 3 0 (tinfo 0xed9ffb40)
+Syncing files to device Android SDK built for x86...                                                                      I/OpenGLRenderer(10890): Davey! duration=3811ms; Flags=1, Intend
+edVsync=130485836276355, Vsync=130488902942899, OldestInputEvent=9223372036854775807, NewestInputEvent=0, HandleInputStart=130488905435300, AnimationStart=130488906846130, PerformTravers
+alsStart=130488907860960, DrawStart=130488919965740, SyncQueued=130488923250560, SyncStart=130488925712140, IssueDrawCommandsStart=130488926074360, SwapBuffers=130489315741270, FrameComp
+leted=130489649954150, DequeueBufferDuration=18607000, QueueBufferDuration=1795000,
+D/EGL_emulation(10890): eglMakeCurrent: 0xe628ce20: ver 3 0 (tinfo 0xed9ff3f0)
+Syncing files to device Android SDK built for x86...             6,247ms (!)
 
-Using the command line:
+🔥  To hot reload changes while running, press "r". To hot restart (and rebuild state), press "R".
+An Observatory debugger and profiler on Android SDK built for x86 is available at: http://127.0.0.1:60518/Fi1yvB29Qj4=/
+For a more detailed help message, press "h". To detach, press "d"; to quit, press "q".
 
-cd <app dir> (replace <app dir> with your application’s directory).
-Run flutter build apk (flutter build defaults to --release).
-The release APK for your app is created at <app dir>/build/app/outputs/apk/app-release.apk.
+Application finished.
 
-Installing a release APK on a device
-Follow these steps to install the APK built in the previous step on a connected Android device.
-
-Using the command line:
-
-Connect your Android device to your computer with a USB cable.
-cd <app dir> where <app dir> is your application directory.
-Run flutter install .
+E:\Code\Java\FlutterWorkspace\my_flutter\my_flutter>
