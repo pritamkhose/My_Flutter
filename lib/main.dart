@@ -26,6 +26,7 @@ import 'fileexploer/filepicker.dart';
 import 'shared_preferences/app_shared_preferences.dart';
 import 'qr/qrscanner.dart';
 import 'video/chewievideoplayer.dart';
+import 'sql/sqldatabase.dart';
 
 // https://github.com/diegoveloper/flutter-samples
 // https://flutter.dev/docs/cookbook/lists/basic-list
@@ -95,6 +96,16 @@ class MyAppState extends State<MyApp> {
             title: "My Edit Form with List",
             actionTap: () {
               onButtonTap(MyForm());
+            },
+          ),
+          MyMenuButton(
+            // https://pub.dev/packages/sqflite
+            // https://flutter.dev/docs/cookbook/persistence/sqlite
+            // https://medium.com/@studymongolian/simple-sqflite-database-example-in-flutter-e56a5aaa3f91
+            // https://github.com/smartherd/Flutter-Demos/blob/master/lib
+            title: "Sql Database",
+            actionTap: () {
+              onButtonTap(MySqlDatabase());
             },
           ),
           MyMenuButton(
