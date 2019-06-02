@@ -12,7 +12,7 @@ import 'animations/loader.dart';
 import 'navigation/tabs.dart';
 import 'navigation/slidenavigation.dart';
 import 'navigation/home_page.dart';
-import 'fcm/fcm.dart';
+import 'firebase/fcm.dart';
 import 'util/url_launcher.dart';
 import 'util/sms.dart';
 import 'util/apppermission.dart';
@@ -28,6 +28,7 @@ import 'qr/qrscanner.dart';
 import 'video/chewievideoplayer.dart';
 import 'sql/sqldatabase.dart';
 import 'sentry/sentrycrashy.dart';
+import 'firebase/firebasehome.dart';
 
 // https://github.com/diegoveloper/flutter-samples
 // https://flutter.dev/docs/cookbook/lists/basic-list
@@ -128,6 +129,15 @@ class MyAppState extends State<MyApp> {
               onButtonTap(GoogleMapMarker());
             },
           ),
+          MyMenuButton(
+            // https://flutter.dev/docs/development/data-and-backend/firebase
+            // https://firebaseopensource.com/projects/flutter/plugins/
+            // https://codelabs.developers.google.com/codelabs/flutter-firebase/index.html#10
+            title: "Firebase",
+            actionTap: () {
+              onButtonTap(FirebaseHome());
+            },
+          ),
 //          MyMenuButton(
 //            // https://pub.dev/packages/simple_permissions#-readme-tab-
 //            // https://github.com/tamcy/simple_permissions
@@ -189,6 +199,8 @@ class MyAppState extends State<MyApp> {
             // https://github.com/nitishk72/firebase_messaging_flutter
             // https://pub.dartlang.org/packages/firebase_messaging#-readme-tab-
             // https://console.firebase.google.com/u/1/project/fiberbase-4b621/settings/general/android:com.example.my_flutter
+            // https://github.com/IhorKlimov/Flutter-Notifications
+            // https://github.com/JohannesMilke/firebase_messaging --run standalone
             title: "FCM",
             actionTap: () {
               FCMNotify();
