@@ -29,6 +29,7 @@ import 'video/chewievideoplayer.dart';
 import 'sql/sqldatabase.dart';
 import 'sentry/sentrycrashy.dart';
 import 'firebase/firebasehome.dart';
+import 'util/mywebview.dart';
 
 // https://github.com/diegoveloper/flutter-samples
 // https://flutter.dev/docs/cookbook/lists/basic-list
@@ -77,15 +78,15 @@ class MyAppState extends State<MyApp> {
       child: ListView(
         children: <Widget>[
           MyMenuButton(
-            title: "Fetch Data JSON",
-            actionTap: () {
-              onButtonTap(MainFetchData());
-            },
-          ),
-          MyMenuButton(
             title: "Flutter Default",
             actionTap: () {
               onButtonTap(FlutterDefault());
+            },
+          ),
+          MyMenuButton(
+            title: "Fetch Data JSON",
+            actionTap: () {
+              onButtonTap(MainFetchData());
             },
           ),
           MyMenuButton(
@@ -98,16 +99,6 @@ class MyAppState extends State<MyApp> {
             title: "My Edit Form with List",
             actionTap: () {
               onButtonTap(MyForm());
-            },
-          ),
-          MyMenuButton(
-            // https://pub.dev/packages/sqflite
-            // https://flutter.dev/docs/cookbook/persistence/sqlite
-            // https://medium.com/@studymongolian/simple-sqflite-database-example-in-flutter-e56a5aaa3f91
-            // https://github.com/smartherd/Flutter-Demos/blob/master/lib
-            title: "Sql Database",
-            actionTap: () {
-              onButtonTap(MySqlDatabase());
             },
           ),
           MyMenuButton(
@@ -138,16 +129,28 @@ class MyAppState extends State<MyApp> {
               onButtonTap(FirebaseHome());
             },
           ),
-//          MyMenuButton(
-//            // https://pub.dev/packages/simple_permissions#-readme-tab-
-//            // https://github.com/tamcy/simple_permissions
-//            // https://pub.dev/packages/permission
-//            // https://github.com/once10301/permission/blob/master/example/lib/main.dart
-//            title: "App permission",
-//            actionTap: () {
-//              onButtonTap(AppPermission());
-//            },
-//          ),
+          MyMenuButton(
+            // http://myhexaville.com/2018/04/09/flutter-push-notifications-with-firebase-cloud-messaging/
+            // https://github.com/nitishk72/firebase_messaging_flutter
+            // https://pub.dartlang.org/packages/firebase_messaging#-readme-tab-
+            // https://console.firebase.google.com/u/1/project/fiberbase-4b621/settings/general/android:com.example.my_flutter
+            // https://github.com/IhorKlimov/Flutter-Notifications
+            // https://github.com/JohannesMilke/firebase_messaging --run standalone
+            title: "FCM",
+            actionTap: () {
+              FCMNotify();
+            },
+          ),
+          /*MyMenuButton(
+            // https://pub.dev/packages/simple_permissions#-readme-tab-
+            // https://github.com/tamcy/simple_permissions
+            // https://pub.dev/packages/permission
+            // https://github.com/once10301/permission/blob/master/example/lib/main.dart
+            title: "App permission",
+            actionTap: () {
+              onButtonTap(AppPermission());
+            },
+          ),*/
           MyMenuButton(
             // https://pub.dev/packages/permission_handler#-installing-tab-
             // https://github.com/BaseflowIT/flutter-permission-handler/blob/develop/example/lib/main.dart
@@ -168,70 +171,31 @@ class MyAppState extends State<MyApp> {
             },
           ),
           MyMenuButton(
-            title: "Flutter Animations",
-            actionTap: () {
-              FlutterAnimations();
-            },
-          ),
-          MyMenuButton(
-            // https://kodestat.gitbook.io/flutter/flutter-tab-navigation
-            title: "Tab Navigation",
-            actionTap: () {
-              TabNavigation();
-            },
-          ),
-          MyMenuButton(
-            // https://kodestat.gitbook.io/flutter/flutter-sliding-menu-using-a-drawer
-            title: "Sliding menu using a Drawer Navigation",
-            actionTap: () {
-              SlideNavigation();
-            },
-          ),
-          MyMenuButton(
-            // https://kodestat.gitbook.io/flutter/flutter-sliding-menu-using-a-drawer/simple-drawer
-            title: "Home menu a Drawer Navigation",
-            actionTap: () {
-              HomeNavigation();
-            },
-          ),
-          MyMenuButton(
-            // http://myhexaville.com/2018/04/09/flutter-push-notifications-with-firebase-cloud-messaging/
-            // https://github.com/nitishk72/firebase_messaging_flutter
-            // https://pub.dartlang.org/packages/firebase_messaging#-readme-tab-
-            // https://console.firebase.google.com/u/1/project/fiberbase-4b621/settings/general/android:com.example.my_flutter
-            // https://github.com/IhorKlimov/Flutter-Notifications
-            // https://github.com/JohannesMilke/firebase_messaging --run standalone
-            title: "FCM",
-            actionTap: () {
-              FCMNotify();
-            },
-          ),
-          MyMenuButton(
-            // https://pub.dartlang.org/packages/url_launcher#-readme-tab-
-            // https://pusher.com/tutorials/flutter-listviews
-            // https://flutter.dev/docs/cookbook/lists/basic-list
-            title: "Url Launcher",
-            actionTap: () {
-              URLLauncher();
-            },
-          ),
-          MyMenuButton(
-            // https://github.com/babariviere/flutter_sms
-            // https://pub.dartlang.org/packages/flutter_sms
-            // https://github.com/AppleEducate/plugins/tree/master/packages/flutter_sms/example
-            // https://www.iflutter.in/flutter-sms/
-            // https://xencov.com/blog/building-a-basic-sms-app-using-flutter-part-1
-            title: "SMS",
-            actionTap: () {
-              SMSContact();
-            },
-          ),
-          MyMenuButton(
             // https://proandroiddev.com/communication-between-flutter-and-native-modules-9b52c6a72dd2
             // https://github.com/RafaO/FlutterNativeCommunication/blob/master/lib/main.dart
             title: "Flutter Native Communication",
             actionTap: () {
               FlutterNative();
+            },
+          ),
+
+          MyMenuButton(
+            // https://pub.dev/packages/sqflite
+            // https://flutter.dev/docs/cookbook/persistence/sqlite
+            // https://medium.com/@studymongolian/simple-sqflite-database-example-in-flutter-e56a5aaa3f91
+            // https://github.com/smartherd/Flutter-Demos/blob/master/lib
+            title: "Sql Database",
+            actionTap: () {
+              onButtonTap(MySqlDatabase());
+            },
+          ),
+          MyMenuButton(
+            // https://pub.dev/packages/shared_preferences
+            // https://medium.com/flutter-community/shared-preferences-how-to-save-flutter-application-settings-and-user-preferences-for-later-554d08671ae9
+            // https://medium.com/@vignesh_prakash/flutter-sharedpreferences-8622bb32abf9
+            title: "Shared Preferences",
+            actionTap: () {
+              AppSharedPreferences();
             },
           ),
           MyMenuButton(
@@ -265,12 +229,58 @@ class MyAppState extends State<MyApp> {
             //https://github.com/swissonid/BarcodeScannerPlugin
           ),
           MyMenuButton(
-            // https://pub.dev/packages/shared_preferences
-            // https://medium.com/flutter-community/shared-preferences-how-to-save-flutter-application-settings-and-user-preferences-for-later-554d08671ae9
-            // https://medium.com/@vignesh_prakash/flutter-sharedpreferences-8622bb32abf9
-            title: "Shared Preferences",
+            // https://pub.dev/packages/webview_flutter#-example-tab-
+            // https://github.com/flutter/plugins/blob/master/packages/webview_flutter/example/lib/main.dart
+            title: "WebView",
             actionTap: () {
-              AppSharedPreferences();
+              MyWebView();
+            },
+          ),
+          MyMenuButton(
+            title: "Flutter Animations",
+            actionTap: () {
+              FlutterAnimations();
+            },
+          ),
+          MyMenuButton(
+            // https://kodestat.gitbook.io/flutter/flutter-tab-navigation
+            title: "Tab Navigation",
+            actionTap: () {
+              TabNavigation();
+            },
+          ),
+          MyMenuButton(
+            // https://kodestat.gitbook.io/flutter/flutter-sliding-menu-using-a-drawer
+            title: "Sliding menu using a Drawer Navigation",
+            actionTap: () {
+              SlideNavigation();
+            },
+          ),
+          MyMenuButton(
+            // https://kodestat.gitbook.io/flutter/flutter-sliding-menu-using-a-drawer/simple-drawer
+            title: "Home menu a Drawer Navigation",
+            actionTap: () {
+              HomeNavigation();
+            },
+          ),
+          MyMenuButton(
+            // https://pub.dartlang.org/packages/url_launcher#-readme-tab-
+            // https://pusher.com/tutorials/flutter-listviews
+            // https://flutter.dev/docs/cookbook/lists/basic-list
+            title: "Url Launcher",
+            actionTap: () {
+              URLLauncher();
+            },
+          ),
+          MyMenuButton(
+            // https://github.com/babariviere/flutter_sms
+            // https://pub.dartlang.org/packages/flutter_sms
+            // https://github.com/AppleEducate/plugins/tree/master/packages/flutter_sms/example
+            // https://www.iflutter.in/flutter-sms/
+            // https://xencov.com/blog/building-a-basic-sms-app-using-flutter-part-1
+            title: "SMS",
+            actionTap: () {
+              SMSContact();
             },
           ),
           MyMenuButton(
@@ -303,14 +313,14 @@ class MyAppState extends State<MyApp> {
               AdidasClone();
             },
           ),
-          MyMenuButton(
+          /*MyMenuButton(
             // https://github.com/frideosapps/data_examples
             // https://medium.com/flutter-community/simple-ways-to-pass-to-and-share-data-with-widgets-pages-f8988534bd5b
             title: "Intent data send example",
             actionTap: () {
               // DataExamples();
             },
-          ),
+          ),*/
         ],
       ),
     );
