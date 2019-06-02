@@ -44,6 +44,7 @@ dependencies:
 #  fast_qr_reader_view: ^0.1.5
   sqflite: ^1.1.0
   intl: ^0.15.7
+  sentry: ^2.2.0
 
 dev_dependencies:
   flutter_test:

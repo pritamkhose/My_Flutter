@@ -27,6 +27,7 @@ import 'shared_preferences/app_shared_preferences.dart';
 import 'qr/qrscanner.dart';
 import 'video/chewievideoplayer.dart';
 import 'sql/sqldatabase.dart';
+import 'sentry/sentrycrashy.dart';
 
 // https://github.com/diegoveloper/flutter-samples
 // https://flutter.dev/docs/cookbook/lists/basic-list
@@ -258,6 +259,16 @@ class MyAppState extends State<MyApp> {
             title: "Shared Preferences",
             actionTap: () {
               AppSharedPreferences();
+            },
+          ),
+          MyMenuButton(
+            // https://pub.dev/packages/sentry#-installing-tab-
+            // https://sentry.io/settings/account/api/applications/
+            // https://sentry.io/organizations/pritam-khose/projects/pritam-khose/getting-started/
+            // https://github.com/flutter/crashy/blob/master/lib/main.dart
+            title: "Sentry Crashy logger",
+            actionTap: () {
+              MySentryCrashy();
             },
           ),
           MyMenuButton(
