@@ -30,6 +30,7 @@ import 'sql/sqldatabase.dart';
 import 'sentry/sentrycrashy.dart';
 import 'firebase/firebasehome.dart';
 import 'util/mywebview.dart';
+import 'firebase/local_notifications.dart';
 
 // https://github.com/diegoveloper/flutter-samples
 // https://flutter.dev/docs/cookbook/lists/basic-list
@@ -139,6 +140,16 @@ class MyAppState extends State<MyApp> {
             title: "FCM",
             actionTap: () {
               FCMNotify();
+            },
+          ),
+          MyMenuButton(
+            // https://pub.dev/packages/local_notifications extra
+            // https://pub.dev/packages/flutter_local_notifications#-example-tab-
+            // https://github.com/MaikuB/flutter_local_notifications/blob/master/example/lib/main.dart extra
+            // https://github.com/nitishk72/flutter_app_local_notification/blob/master/lib/main.dart
+            title: "Local Notification",
+            actionTap: () {
+              LocalMyNotify();
             },
           ),
           /*MyMenuButton(
