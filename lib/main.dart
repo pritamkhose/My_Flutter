@@ -142,7 +142,7 @@ class MyAppState extends State<MyApp> {
               FCMNotify();
             },
           ),
-          MyMenuButton(
+          /*MyMenuButton(
             // https://pub.dev/packages/local_notifications extra
             // https://pub.dev/packages/flutter_local_notifications#-example-tab-
             // https://github.com/MaikuB/flutter_local_notifications/blob/master/example/lib/main.dart extra
@@ -151,7 +151,7 @@ class MyAppState extends State<MyApp> {
             actionTap: () {
               LocalMyNotify();
             },
-          ),
+          ),*/
           /*MyMenuButton(
             // https://pub.dev/packages/simple_permissions#-readme-tab-
             // https://github.com/tamcy/simple_permissions

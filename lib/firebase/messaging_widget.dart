@@ -1,6 +1,6 @@
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
-import 'message.dart';
+import 'notifymessage.dart';
 
 class MessagingWidget extends StatefulWidget {
   @override
@@ -9,7 +9,7 @@ class MessagingWidget extends StatefulWidget {
 
 class _MessagingWidgetState extends State<MessagingWidget> {
   final FirebaseMessaging _firebaseMessaging = FirebaseMessaging();
-  final List<Message> messages = [];
+  final List<NotifyMessage> messages = [];
 
   @override
   void initState() {
@@ -19,7 +19,7 @@ class _MessagingWidgetState extends State<MessagingWidget> {
         print("onMessage: $message");
         final notification = message['notification'];
         setState(() {
-          messages.add(Message(
+          messages.add(NotifyMessage(
               title: notification['title'], body: notification['body']));
         });
       },
@@ -28,7 +28,7 @@ class _MessagingWidgetState extends State<MessagingWidget> {
 
         final notification = message['data'];
         setState(() {
-          messages.add(Message(
+          messages.add(NotifyMessage(
             title: '${notification['title']}',
             body: '${notification['body']}',
           ));
@@ -50,7 +50,7 @@ class _MessagingWidgetState extends State<MessagingWidget> {
         children: messages.map(buildMessage).toList(),
       );
 
-  Widget buildMessage(Message message) => ListTile(
+  Widget buildMessage(NotifyMessage message) => ListTile(
         title: Text(message.title),
         subtitle: Text(message.body),
       );
