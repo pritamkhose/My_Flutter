@@ -33,6 +33,7 @@ import 'sentry/sentrycrashy.dart';
 import 'firebase/firebasehome.dart';
 import 'util/mywebview.dart';
 import 'firebase/local_notifications.dart';
+import 'firebase/ml_vision_firebase.dart';
 
 // https://github.com/diegoveloper/flutter-samples
 // https://flutter.dev/docs/cookbook/lists/basic-list
@@ -145,6 +146,14 @@ class MyAppState extends State<MyApp> {
             title: "Firebase",
             actionTap: () {
               onButtonTap(FirebaseHome());
+            },
+          ),
+          MyMenuButton(
+            // https://pub.dev/packages/firebase_ml_vision
+            // https://github.com/flutter/plugins/blob/master/packages/firebase_ml_vision/example/lib/main.dart
+            title: "Firebase ML vision",
+            actionTap: () {
+              onButtonTap(FirebaseMLKitHome());
             },
           ),
           MyMenuButton(
