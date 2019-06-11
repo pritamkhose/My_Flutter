@@ -5,7 +5,11 @@ import 'dart:convert';
 import 'dart:io';
 import 'package:http/http.dart' as http;
 
+import 'dart:async';
+import 'package:flutter_local_notifications/flutter_local_notifications.dart';
+
 import 'messaging_widget.dart';
+import 'notifymessage.dart';
 
 void FCMNotify() => runApp(new MyApp());
 
@@ -56,6 +60,9 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  FlutterLocalNotificationsPlugin flutterLocalNotificationsPlugin;
+  final List<NotifyMessage> messages = [];
+
   FirebaseMessaging _firebaseMessaging = new FirebaseMessaging();
   String atoken = '';
 
@@ -65,12 +72,30 @@ class _MyHomePageState extends State<MyHomePage> {
     _firebaseMessaging.configure(
       onMessage: (Map<String, dynamic> message) {
         print('on message $message');
+
+        final notification = message['notification'];
+        setState(() {
+          messages.add(NotifyMessage(
+            title: '${notification['title']}',
+            body: '${notification['body']}',
+          ));
+        });
+
+        showfcmNotification(messages);
       },
       onResume: (Map<String, dynamic> message) {
         print('on resume $message');
       },
       onLaunch: (Map<String, dynamic> message) {
         print('on launch $message');
+
+        final notification = message['notification'];
+        setState(() {
+          messages.add(NotifyMessage(
+            title: '${notification['title']}',
+            body: '${notification['body']}',
+          ));
+        });
       },
     );
     _firebaseMessaging.requestNotificationPermissions(
@@ -81,6 +106,14 @@ class _MyHomePageState extends State<MyHomePage> {
         atoken = token;
       });
     });
+
+    // initialise the plugin. app_icon needs to be a added as a drawable resource to the Android head project
+    flutterLocalNotificationsPlugin = new FlutterLocalNotificationsPlugin();
+    var android = new AndroidInitializationSettings('@mipmap/ic_launcher');
+    var iOS = new IOSInitializationSettings();
+    var initSetttings = new InitializationSettings(android, iOS);
+    flutterLocalNotificationsPlugin.initialize(initSetttings,
+        onSelectNotification: onSelectNotification);
   }
 
   @override
@@ -96,6 +129,10 @@ class _MyHomePageState extends State<MyHomePage> {
             RaisedButton(
               child: new Text("Send Notification"),
               onPressed: _sendNotify,
+            ),
+            RaisedButton(
+              child: new Text("Local Notification"),
+              onPressed: showNotification,
             ),
             Text('Device Token = '+ atoken),
           ],
@@ -143,7 +180,7 @@ class _MyHomePageState extends State<MyHomePage> {
           isLoading = false;
           _ackAlert(
               context,
-              'Save Sucessfully! ' + response.statusCode.toString(),
+              'Send Sucessfully! ' + response.statusCode.toString(),
               response.body.toString());
         });
       } else {
@@ -183,5 +220,39 @@ class _MyHomePageState extends State<MyHomePage> {
         );
       },
     );
+  }
+
+
+  Future onSelectNotification(String payload) {
+    debugPrint("payload : $payload");
+    showDialog(
+      context: context,
+      builder: (_) => new AlertDialog(
+        title: new Text('Notification'),
+        content: new Text('$payload'),
+      ),
+    );
+  }
+
+  showNotification() async {
+    var android = new AndroidNotificationDetails(
+        'channel id', 'channel NAME', 'CHANNEL DESCRIPTION',
+        priority: Priority.High, importance: Importance.Max);
+    var iOS = new IOSNotificationDetails();
+    var platform = new NotificationDetails(android, iOS);
+    await flutterLocalNotificationsPlugin.show(
+        0, 'New Video is out', 'Flutter Local Notification', platform,
+        payload: 'Nitish Kumar Singh is part time Youtuber');
+  }
+
+  showfcmNotification(List<NotifyMessage> message) async {
+    var android = new AndroidNotificationDetails(
+        'channel id', 'channel NAME', 'CHANNEL DESCRIPTION',
+        priority: Priority.High, importance: Importance.Max);
+    var iOS = new IOSNotificationDetails();
+    var platform = new NotificationDetails(android, iOS);
+    await flutterLocalNotificationsPlugin.show(
+        0, message[0].title, message[0].body, platform,
+        payload: 'Nitish Kumar Singh is part time Youtuber');
   }
 }
