@@ -25,6 +25,7 @@ dependencies:
   cupertino_icons: ^0.1.2
   http: any
   google_maps_flutter: ^0.5.13
+  geolocator: ^5.0.1
   video_player: ^0.10.1
   chewie: ^0.9.7
   flutter_sound: ^1.4.1

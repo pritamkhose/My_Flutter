@@ -8,6 +8,7 @@ import 'user_listview/user_listview.dart';
 import 'myform/myform.dart';
 import 'googlemap/googlemapsample.dart';
 import 'googlemap/googlemapmarker.dart';
+import 'googlemap/geolocatorloc.dart';
 import 'animations/loader.dart';
 import 'navigation/tabs.dart';
 import 'navigation/slidenavigation.dart';
@@ -130,6 +131,14 @@ class MyAppState extends State<MyApp> {
             },
           ),
           MyMenuButton(
+            // https://pub.dev/packages/geolocator
+            // https://github.com/BaseflowIT/flutter-geolocator/blob/develop/example/lib/main.dart
+            title: "Geolocator",
+            actionTap: () {
+              onButtonTap(GeolocatorExampleApp());
+            },
+          ),
+          MyMenuButton(
             // https://flutter.dev/docs/development/data-and-backend/firebase
             // https://firebaseopensource.com/projects/flutter/plugins/
             // https://codelabs.developers.google.com/codelabs/flutter-firebase/index.html#10
@@ -205,7 +214,6 @@ class MyAppState extends State<MyApp> {
               FlutterNative();
             },
           ),
-
           MyMenuButton(
             // https://pub.dev/packages/sqflite
             // https://flutter.dev/docs/cookbook/persistence/sqlite
