@@ -26,6 +26,7 @@ import 'fileexploer/filepicker.dart';
 import 'shared_preferences/app_shared_preferences.dart';
 import 'qr/qrscanner.dart';
 import 'video/chewievideoplayer.dart';
+import 'video/soundrecordplayer.dart';
 import 'sql/sqldatabase.dart';
 import 'sentry/sentrycrashy.dart';
 import 'firebase/firebasehome.dart';
@@ -102,6 +103,13 @@ class MyAppState extends State<MyApp> {
               onButtonTap(MyForm());
             },
           ),
+          /*MyMenuButton(
+            // https://pub.dev/packages/dio
+            title: "dio Http client for Dart",
+            actionTap: () {
+              onButtonTap(dioHttpClient());
+            },
+          ),*/
           MyMenuButton(
             // https://pub.dev/packages/google_maps_flutter
             title: "Google Map",
@@ -179,6 +187,14 @@ class MyAppState extends State<MyApp> {
             title: "Video Player chewie",
             actionTap: () {
               MyVideoPlayerScreen();
+            },
+          ),
+          MyMenuButton(
+            // https://pub.dev/packages/flutter_sound
+            // https://github.com/dooboolab/flutter_sound/blob/master/example/lib/main.dart
+            title: "Sound Record Player",
+            actionTap: () {
+              SoundRecordPlayer();
             },
           ),
           MyMenuButton(
