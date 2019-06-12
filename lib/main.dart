@@ -34,6 +34,7 @@ import 'firebase/firebasehome.dart';
 import 'util/mywebview.dart';
 import 'firebase/local_notifications.dart';
 import 'firebase/ml_vision_firebase.dart';
+import 'codelab/cupertino-store-app.dart';
 
 // https://github.com/diegoveloper/flutter-samples
 // https://flutter.dev/docs/cookbook/lists/basic-list
@@ -284,6 +285,16 @@ class MyAppState extends State<MyApp> {
             title: "Flutter Animations",
             actionTap: () {
               FlutterAnimations();
+            },
+          ),
+          MyMenuButton(
+            // https://pub.dev/packages/shrine_images
+            // https://codelabs.developers.google.com/?cat=Flutter
+            // https://codelabs.developers.google.com/codelabs/flutter-cupertino/index.html?index=..%2F..index#2
+            // https://github.com/googlecodelabs/flutter-cupertino-store/tree/master/step-06/lib
+            title: "Cupertino Store App",
+            actionTap: () {
+              CupertinoStoreApp();
             },
           ),
           MyMenuButton(
