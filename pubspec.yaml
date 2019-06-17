@@ -110,6 +110,12 @@ flutter:
       - assets/icons/ic_volume_up.png
       - assets/icons/2.0x/ic_volume_up.png
       - assets/icons/3.0x/ic_volume_up.png
+      - assets/my_profile.jpg
+      - assets/their_profile.jpeg
+      - assets/photo_1.jpeg
+      - assets/follower2.jpg
+      - assets/follower3.jpeg
+      - assets/post2.jpg
       - packages/shrine_images/0-0.jpg
       - packages/shrine_images/1-0.jpg
       - packages/shrine_images/2-0.jpg
