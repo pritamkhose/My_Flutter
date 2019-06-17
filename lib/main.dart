@@ -20,6 +20,8 @@ import 'util/apppermission.dart';
 import 'util/applicationpermission.dart';
 import 'flutternative/flutternative.dart';
 import 'samplescreen/netfilx.dart';
+import 'samplescreen/instagram.dart';
+import 'samplescreen/secretsanta.dart';
 import 'samplescreen/amazon.dart';
 import 'samplescreen/adidas.dart';
 import 'fileexploer/reading-writing-file.dart';
@@ -45,6 +47,7 @@ import 'codelab/cupertino-store-app.dart';
 // https://github.com/flutter/plugins
 
 void main() => runApp(MaterialApp(
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
@@ -349,10 +352,24 @@ class MyAppState extends State<MyApp> {
             },
           ),
           MyMenuButton(
-            // https://codeload.github.com/KalleHallden/Netflix_Clone/zip/master
+            // https://github.com/KalleHallden/Netflix_Clone
             title: "Netfilx clone",
             actionTap: () {
               NetfilxClone();
+            },
+          ),
+          MyMenuButton(
+            // https://github.com/KalleHallden/Instagram
+            title: "Instagram clone",
+            actionTap: () {
+              InstagramClone();
+            },
+          ),
+          MyMenuButton(
+            // https://github.com/KalleHallden/SecretSantaFlutterApp/blob/master/secretsanta/lib/main.dart
+            title: "Secret Santa clone",
+            actionTap: () {
+              SecretSantaClone();
             },
           ),
           MyMenuButton(
