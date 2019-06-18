@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 // import 'package:toast/toast.dart';
 //import 'package:fluttertoast/fluttertoast.dart';
 
-import 'fetch_data/main_fetch_data.dart';
+import '../fetch_data/main_fetch_data.dart';
 
 // https://github.com/diegoveloper/flutter-samples
 // https://flutter.dev/docs/cookbook/lists/basic-list
