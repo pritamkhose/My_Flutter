@@ -2,10 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/cupertino.dart';
 
-void main() => runApp(FriendlychatApp());
-
-// https://flutter.dev/docs/get-started/codelab
-// https://codelabs.developers.google.com/codelabs/flutter/index.html?index=..%2F..index#3
+void FriendlychatApp() => runApp(Friendlychat());
 
 const String _name = "Your Name";
 
@@ -20,7 +17,7 @@ final ThemeData kDefaultTheme = new ThemeData(
   accentColor: Colors.orangeAccent[400],
 );
 
-class FriendlychatApp extends StatelessWidget {
+class Friendlychat extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return new MaterialApp(
