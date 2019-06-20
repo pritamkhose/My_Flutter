@@ -116,6 +116,8 @@ flutter:
       - assets/follower2.jpg
       - assets/follower3.jpeg
       - assets/post2.jpg
+      - assets/amazon1.png
+      - assets/amazon2.png
       - packages/shrine_images/0-0.jpg
       - packages/shrine_images/1-0.jpg
       - packages/shrine_images/2-0.jpg
