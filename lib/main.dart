@@ -36,6 +36,7 @@ import 'util/mywebview.dart';
 import 'firebase/ml_vision_firebase.dart';
 import 'codelab/cupertino-store-app.dart';
 import 'codelab/flutter_listview.dart';
+import 'codelab/main_friendlychat.dart';
 
 // https://github.com/diegoveloper/flutter-samples
 // https://flutter.dev/docs/cookbook/lists/basic-list
@@ -300,6 +301,10 @@ class MyAppState extends State<MyApp> {
             },
           ),
         MyMenuButton(
+          // https://flutter.dev/docs/get-started/codelab
+          // https://codelabs.developers.google.com/?cat=Flutter
+          // https://codelabs.developers.google.com/codelabs/first-flutter-app-pt1/#0
+          // https://codelabs.developers.google.com/codelabs/first-flutter-app-pt2/#0
           title: "Flutter List Words",
           actionTap: () {
             MyAppList();
@@ -378,7 +383,7 @@ class MyAppState extends State<MyApp> {
             },
           ),
           MyMenuButton(
-            title: "My try Amazon clone",
+            title: "Amazon clone",
             actionTap: () {
               AmazonClone();
             },
@@ -388,6 +393,14 @@ class MyAppState extends State<MyApp> {
             title: "Adidas clone",
             actionTap: () {
               AdidasClone();
+            },
+          ),
+          MyMenuButton(
+            // https://flutter.dev/docs/get-started/codelab
+            // https://codelabs.developers.google.com/codelabs/flutter/index.html?index=..%2F..index#3
+            title: "Friendly chat App",
+            actionTap: () {
+              FriendlychatApp();
             },
           ),
           /*MyMenuButton(

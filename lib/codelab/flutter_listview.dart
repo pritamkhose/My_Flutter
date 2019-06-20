@@ -1,35 +1,24 @@
 import 'package:flutter/material.dart';
-
 import 'package:english_words/english_words.dart';
 
-void main() => runApp(MyAppList());
+void MyAppList() => runApp(MyAppListApp());
 
-// https://flutter.dev/docs/get-started/codelab
-// https://codelabs.developers.google.com/?cat=Flutter
-// https://codelabs.developers.google.com/codelabs/first-flutter-app-pt1/#0
-// https://codelabs.developers.google.com/codelabs/first-flutter-app-pt2/#0
-
-class MyAppList extends StatelessWidget {
+class MyAppListApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return new MaterialApp(
-      title: 'Flutter List Words',
+      title: "Flutter List Words",
       theme: new ThemeData(          // Add the 3 lines from here...
-        primaryColor: Colors.white,
+        primaryColor: Colors.blue,
       ),
-      home: new Scaffold(
-//        appBar: new AppBar(
-//          title: new Text('Welcome to Flutter'),
-//        ),
-        body: new Center(
-          // Change "const" to "new".
-          //child: const Text('Hello World'),   // Replace this text..
-          //child: new Text(wordPair.asPascalCase),  // With this text.
-          child: new RandomWords(),
-        ),
-      ),
+      home: new RandomWords(),
     );
   }
+}
+
+class RandomWords extends StatefulWidget {
+  @override
+  RandomWordsState createState() => new RandomWordsState();
 }
 
 class RandomWordsState extends State<RandomWords> {
@@ -124,7 +113,4 @@ class RandomWordsState extends State<RandomWords> {
   }
 }
 
-class RandomWords extends StatefulWidget {
-  @override
-  RandomWordsState createState() => new RandomWordsState();
-}
+
