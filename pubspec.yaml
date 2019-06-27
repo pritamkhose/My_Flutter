@@ -53,6 +53,10 @@ dependencies:
   firebase_ml_vision: ^0.9.0
   provider: ^3.0.0+1
   shrine_images: ^1.1.2
+  scoped_model: "^1.0.1"
+  location: "^2.3.5"
+  rxdart: "^0.22.0"
+  mime: "^0.9.6+3"
 
 dev_dependencies:
   flutter_test:
@@ -118,6 +122,8 @@ flutter:
       - assets/post2.jpg
       - assets/amazon1.png
       - assets/amazon2.png
+      - assets/background.jpg
+      - assets/food.jpg
       - packages/shrine_images/0-0.jpg
       - packages/shrine_images/1-0.jpg
       - packages/shrine_images/2-0.jpg
@@ -183,6 +189,11 @@ flutter:
     - family: Montserrat-SemiBold
       fonts:
         - asset: assets/Montserrat-SemiBold.ttf
+
+    - family: Oswald
+      fonts:
+        - asset: assets/Oswald-Bold.ttf
+          weight: 700
   # fonts:
   #   - family: Schyler
   #     fonts:
