@@ -12,7 +12,7 @@ import './shared/global_config.dart';
 
 // https://console.cloud.google.com/apis/credentials?folder=&organizationId=&project=securance-94e24
 // https://console.firebase.google.com/project/fiberbase-4b621/settings/general/android:com.example.my_flutter
-
+// https://console.firebase.google.com/u/1/project/fiberbase-4b621/database/fiberbase-4b621/data
 void main() => runApp(MaxmillionAPP());
 
 /*void main() => runApp(
