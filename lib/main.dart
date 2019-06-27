@@ -37,6 +37,7 @@ import 'firebase/ml_vision_firebase.dart';
 import 'codelab/cupertino-store-app.dart';
 import 'codelab/flutter_listview.dart';
 import 'codelab/main_friendlychat.dart';
+import 'maxmillian/maxmillian.dart';
 
 // https://github.com/diegoveloper/flutter-samples
 // https://flutter.dev/docs/cookbook/lists/basic-list
@@ -288,6 +289,12 @@ class MyAppState extends State<MyApp> {
             title: "Flutter Animations",
             actionTap: () {
               FlutterAnimations();
+            },
+          ),
+	   MyMenuButton(
+            title: "Maxmillion APP",
+            actionTap: () {
+              onButtonTap(MaxmillionAPP());
             },
           ),
           MyMenuButton(
