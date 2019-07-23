@@ -69,13 +69,15 @@ class _MyHomePageState extends State<_MyHomePage> {
 //      }),
 //    );
     // https://stackoverflow.com/questions/51548107/canonical-way-to-use-futurebuilder-with-networkimage
-    image.image
+/*    image.image
         .resolve(ImageConfiguration())
         .addListener((ImageInfo info, _) => completer.complete(Size(
               info.image.width.toDouble(),
               info.image.height.toDouble(),
-            )));
+            )));*/
+    // New API
 
+    // wait for ImageInfo to finish
     final Size imageSize = await completer.future;
     setState(() {
       _imageSize = imageSize;
