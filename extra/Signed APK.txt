@@ -1,3 +1,46 @@
+ows [Version 10.0.16299.98]
+(c) 2017 Microsoft Corporation. All rights reserved.
+
+E:\Code\Java\FlutterWorkspace\My_Flutter>flutter doctor
+Doctor summary (to see all details, run flutter doctor -v):
+[√] Flutter (Channel stable, v1.7.8+hotfix.3, on Microsoft Windows [Version 10.0.16299.98], locale en-IN)
+
+[√] Android toolchain - develop for Android devices (Android SDK version 28.0.3)
+[√] Android Studio (version 3.4)
+[√] VS Code (version 1.36.1)
+[√] Connected device (1 available)
+
+• No issues found!
+
+E:\Code\Java\FlutterWorkspace\My_Flutter>flutter clean
+Deleting 'build\'.
+Deleting 'E:\Code\Java\FlutterWorkspace\My_Flutter\.dart_tool\'.
+
+E:\Code\Java\FlutterWorkspace\My_Flutter>flutter build apk
+You are building a fat APK that includes binaries for android-arm, android-arm64.
+If you are deploying the app to the Play Store, it's recommended to use app bundles or split the APK to reduce the APK size.
+    To generate an app bundle, run:
+        flutter build appbundle --target-platform android-arm,android-arm64
+        Learn more on: https://developer.android.com/guide/app-bundle
+    To split the APKs per ABI, run:
+        flutter build apk --target-platform android-arm,android-arm64 --split-per-abi
+        Learn more on:  https://developer.android.com/studio/build/configure-apk-splits#configure-abi-split
+Initializing gradle...                                              1.2s
+Resolving dependencies...                                           4.7s
+Running Gradle task 'assembleRelease'...
+Running Gradle task 'assembleRelease'... Done                      89.5s
+Built build\app\outputs\apk\release\app-release.apk (22.2MB).
+
+E:\Code\Java\FlutterWorkspace\My_Flutter>flutter --version
+Flutter 1.7.8+hotfix.3 • channel stable • https://github.com/flutter/flutter.git
+Framework • revision b712a172f9 (2 weeks ago) • 2019-07-09 13:14:38 -0700
+Engine • revision 54ad777fd2
+Tools • Dart 2.4.0
+
+E:\Code\Java\FlutterWorkspace\My_Flutter>
+
+---------------------------------------------------------------------------------------------------
+
 Microsoft Windows [Version 10.0.16299.98]
 (c) 2017 Microsoft Corporation. All rights reserved.
 
@@ -11,10 +54,6 @@ Doctor summary (to see all details, run flutter doctor -v):
 [√] Connected device (1 available)
 
 • No issues found!
-
-E:\Code\Java\FlutterWorkspace\my_flutter\my_flutter>flutter clean
-Deleting 'build\'.
-Deleting 'E:\Code\Java\FlutterWorkspace\my_flutter\my_flutter\.dart_tool\'.
 
 E:\Code\Java\FlutterWorkspace\my_flutter\my_flutter>flutter clean
 Deleting 'build\'.
@@ -42,15 +81,6 @@ Built build\app\outputs\apk\release\app-release.apk (14.5MB).
 E:\Code\Java\FlutterWorkspace\my_flutter\my_flutter>
 
 ---------------------------------------------------------------------------------------------------
-
-
-
-
-
-
-
-
-
 
 
 Microsoft Windows [Version 10.0.16299.98]

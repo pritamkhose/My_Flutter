@@ -13,7 +13,12 @@
           "package_name": "com.example.my_flutter"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "1065695646631-a37q4qi0b1c524us2fdt3mf24g22c9lu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyDGOJQcqnxf2IGT-UxYHKZFvQYyqWHzudA"
@@ -37,7 +42,41 @@
           "package_name": "com.pritam.crashanalytics"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "1065695646631-a37q4qi0b1c524us2fdt3mf24g22c9lu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDGOJQcqnxf2IGT-UxYHKZFvQYyqWHzudA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1065695646631-74r99t3ldggt1lu7esc5nuv07vu2merr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1065695646631:android:7b36c9c85a0692c5",
+        "android_client_info": {
+          "package_name": "com.pritam.my_flutter"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1065695646631-a37q4qi0b1c524us2fdt3mf24g22c9lu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyDGOJQcqnxf2IGT-UxYHKZFvQYyqWHzudA"
@@ -61,7 +100,12 @@
           "package_name": "com.pritam.myappfcm"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "1065695646631-a37q4qi0b1c524us2fdt3mf24g22c9lu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyDGOJQcqnxf2IGT-UxYHKZFvQYyqWHzudA"
@@ -85,7 +129,12 @@
           "package_name": "com.pritam.myworldapp"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "1065695646631-a37q4qi0b1c524us2fdt3mf24g22c9lu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyDGOJQcqnxf2IGT-UxYHKZFvQYyqWHzudA"
