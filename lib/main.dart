@@ -1,26 +1,27 @@
 import 'package:flutter/material.dart';
 
 //import 'package:fluttertoast/fluttertoast.dart';
-//import 'fetch_data/main_fetch_data.dart';
-//import 'user_listview/user_listview.dart';
-//import 'myform/myform.dart';
+import 'fetch_data/main_fetch_data.dart';
+import 'user_listview/user_listview.dart';
+import 'myform/myform.dart';
 //import 'googlemap/googlemapsample.dart';
 //import 'googlemap/googlemapmarker.dart';
 //import 'googlemap/geolocatorloc.dart';
-//import 'animations/loader.dart';
-//import 'navigation/tabs.dart';
-//import 'navigation/slidenavigation.dart';
-//import 'navigation/home_page.dart';
 //import 'firebase/fcm.dart';
-//import 'util/url_launcher.dart';
-//import 'util/sms.dart';
+import 'animations/loader.dart';
+import 'navigation/tabs.dart';
+import 'navigation/slidenavigation.dart';
+import 'navigation/home_page.dart';
+import 'util/url_launcher.dart';
+import 'util/sms.dart';
+import 'util/mywebview.dart';
 //import 'util/applicationpermission.dart';
 //import 'flutternative/flutternative.dart';
-//import 'samplescreen/netfilx.dart';
-//import 'samplescreen/instagram.dart';
-//import 'samplescreen/secretsanta.dart';
-//import 'samplescreen/amazon.dart';
-//import 'samplescreen/adidas.dart';
+import 'samplescreen/netfilx.dart';
+import 'samplescreen/instagram.dart';
+import 'samplescreen/secretsanta.dart';
+import 'samplescreen/amazon.dart';
+import 'samplescreen/adidas.dart';
 //import 'fileexploer/reading-writing-file.dart';
 //import 'fileexploer/filepicker.dart';
 //import 'shared_preferences/app_shared_preferences.dart';
@@ -30,12 +31,11 @@ import 'package:flutter/material.dart';
 //import 'sql/sqldatabase.dart';
 //import 'sentry/sentrycrashy.dart';
 //import 'firebase/firebasehome.dart';
-//import 'util/mywebview.dart';
 //import 'firebase/ml_vision_firebase.dart';
 import 'codelab/flutter_default.dart';
-//import 'codelab/cupertino-store-app.dart';
-//import 'codelab/flutter_listview.dart';
-//import 'codelab/main_friendlychat.dart';
+import 'codelab/cupertino-store-app.dart';
+import 'codelab/flutter_listview.dart';
+import 'codelab/main_friendlychat.dart';
 //import 'maxmillian/maxmillian.dart';
 
 /* Link
@@ -69,8 +69,9 @@ class MyAppState extends State<MyApp> {
         context, MaterialPageRoute(builder: (BuildContext context) => page));
   }
 
-  DateTime currentBackPressTime = DateTime.now();
+  // https://stackoverflow.com/questions/40579879/display-snackbar-in-flutter
   final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
+  DateTime currentBackPressTime = DateTime.now();
 
   @override
   Widget build(BuildContext context) {
@@ -94,7 +95,7 @@ class MyAppState extends State<MyApp> {
               onButtonTap(FlutterDefault());
             },
           ),
-          /* MyMenuButton(
+          MyMenuButton(
             title: "Fetch Data JSON",
             actionTap: () {
               onButtonTap(MainFetchData());
@@ -119,7 +120,7 @@ class MyAppState extends State<MyApp> {
 //              onButtonTap(dioHttpClient());
 //            },
 //          ),
-          MyMenuButton(
+          /* MyMenuButton(
             // https://pub.dev/packages/google_maps_flutter
             title: "Google Map",
             actionTap: () {
@@ -278,7 +279,7 @@ class MyAppState extends State<MyApp> {
             //https://pub.dev/packages/qr_code_scanner#-readme-tab-
             //https://pub.dev/packages?q=qr
             //https://github.com/swissonid/BarcodeScannerPlugin
-          ),
+          ),*/
           MyMenuButton(
             // https://pub.dev/packages/webview_flutter#-example-tab-
             // https://github.com/flutter/plugins/blob/master/packages/webview_flutter/example/lib/main.dart
@@ -293,12 +294,12 @@ class MyAppState extends State<MyApp> {
               FlutterAnimations();
             },
           ),
-	        MyMenuButton(
+	        /*MyMenuButton(
             title: "Maxmillion APP",
             actionTap: () {
               onButtonTap(MaxmillionAPP());
             },
-          ),
+          ),*/
           MyMenuButton(
             // https://pub.dev/packages/shrine_images
             // https://codelabs.developers.google.com/?cat=Flutter
@@ -360,7 +361,7 @@ class MyAppState extends State<MyApp> {
               SMSContact();
             },
           ),
-          MyMenuButton(
+          /*MyMenuButton(
             // https://pub.dev/packages/sentry#-installing-tab-
             // https://sentry.io/settings/account/api/applications/
             // https://sentry.io/organizations/pritam-khose/projects/pritam-khose/getting-started/
@@ -369,7 +370,7 @@ class MyAppState extends State<MyApp> {
             actionTap: () {
               MySentryCrashy();
             },
-          ),
+          ),*/
           MyMenuButton(
             // https://github.com/KalleHallden/Netflix_Clone
             title: "Netfilx clone",
@@ -404,14 +405,14 @@ class MyAppState extends State<MyApp> {
               AdidasClone();
             },
           ),
-          MyMenuButton(
+          /*MyMenuButton(
             // https://flutter.dev/docs/get-started/codelab
             // https://codelabs.developers.google.com/codelabs/flutter/index.html?index=..%2F..index#3
             title: "Friendly chat App",
             actionTap: () {
               FriendlychatApp();
             },
-          ),
+          ),*/
 //          MyMenuButton(
 //            // https://github.com/frideosapps/data_examples
 //            // https://medium.com/flutter-community/simple-ways-to-pass-to-and-share-data-with-widgets-pages-f8988534bd5b
@@ -420,7 +421,6 @@ class MyAppState extends State<MyApp> {
 //              // DataExamples();
 //            },
 //          ),
-        */
         ],
       ),
     );
