@@ -9,7 +9,8 @@ import 'sampleform.dart';
 
 class MyForm extends StatefulWidget {
   // static const String url = "http://ec2-13-232-4-223.ap-south-1.compute.amazonaws.com:8080/data/data";
-  static const String url = "https://angular-node-all.herokuapp.com/RestAPIMongoDBAll?Database=nodeMongo&Collection=data";
+  // static const String url = "https://angular-node-all.herokuapp.com/RestAPIMongoDBAll?Database=nodeMongo&Collection=data";
+  static const String url = "https://pritam-java.herokuapp.com/data/data";
 
   @override
   _MyFormState createState() => _MyFormState();
