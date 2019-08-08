@@ -1,0 +1,31 @@
+E:\Software\AndroidStudio\apk>keytool -list -printcert -jarfile app-release.apk
+Signer #1:
+
+Signature:
+
+Owner: CN=Pritam Khose, OU=pritam, O=pritam, L=Pune, ST=Maharashtra, C=IN
+Issuer: CN=Pritam Khose, OU=pritam, O=pritam, L=Pune, ST=Maharashtra, C=IN
+Serial number: 26c9a578
+Valid from: Wed May 22 23:30:37 IST 2019 until: Sat May 19 23:30:37 IST 2029
+Certificate fingerprints:
+         MD5:  16:6B:53:A7:5D:05:CD:6B:70:B6:A9:DE:17:92:65:D0
+         SHA1: A4:5B:8E:28:83:29:88:95:22:E9:D9:AF:81:0F:3A:B5:62:6E:BF:41
+         SHA256: 44:A6:D4:29:B7:5E:7E:ED:29:D0:44:FB:71:C6:89:93:58:B9:FF:87:B1:72:35:90:4C:80:7E:44:F6:87:40:E6
+Signature algorithm name: SHA256withRSA
+Subject Public Key Algorithm: 2048-bit RSA key
+Version: 3
+
+Extensions:
+
+#1: ObjectId: 2.5.29.14 Criticality=false
+SubjectKeyIdentifier [
+KeyIdentifier [
+0000: A4 4A B4 7F 6E C1 4E B1   6B C3 3D E6 BF D4 E6 61  .J..n.N.k.=....a
+0010: DF 5C 88 DB                                        .\..
+]
+]
+
+
+
+E:\Software\AndroidStudio\apk>
+
