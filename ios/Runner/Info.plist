@@ -26,6 +26,26 @@
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
 	<string>Main</string>
+    <key>NSCalendarsUsageDescription</key>
+	<string>Your prompt</string>
+	<key>NSCameraUsageDescription</key>
+	<string>Your prompt</string>
+	<key>NSContactsUsageDescription</key>
+	<string>Your prompt</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>Your prompt</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Your prompt</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>This uses the microphone to record your speech and convert it to text.</string>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>audio</string>
+	</array>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Your prompt</string>
+	<key>NSRemindersUsageDescription</key>
+	<string>Your prompt</string>
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>

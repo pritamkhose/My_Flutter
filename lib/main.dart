@@ -16,7 +16,7 @@ import 'util/url_launcher.dart';
 import 'util/sms.dart';
 import 'util/mywebview.dart';
 import 'util/applicationpermission.dart';
-//import 'flutternative/flutternative.dart';
+import 'flutternative/flutternative.dart';
 import 'samplescreen/netfilx.dart';
 import 'samplescreen/instagram.dart';
 import 'samplescreen/secretsanta.dart';
@@ -29,7 +29,7 @@ import 'qr/qrscanner.dart';
 import 'video/chewievideoplayer.dart';
 import 'video/soundrecordplayer.dart';
 import 'sql/sqldatabase.dart';
-//import 'sentry/sentrycrashy.dart';
+import 'sentry/sentrycrashy.dart';
 //import 'firebase/firebasehome.dart';
 //import 'firebase/ml_vision_firebase.dart';
 import 'codelab/flutter_default.dart';
@@ -223,14 +223,14 @@ class MyAppState extends State<MyApp> {
               SoundRecordPlayer();
             },
           ),
-          /*MyMenuButton(
+          MyMenuButton(
             // https://proandroiddev.com/communication-between-flutter-and-native-modules-9b52c6a72dd2
             // https://github.com/RafaO/FlutterNativeCommunication/blob/master/lib/main.dart
             title: "Flutter Native Communication",
             actionTap: () {
               FlutterNative();
             },
-          ),*/
+          ),
           MyMenuButton(
             // https://pub.dev/packages/sqflite
             // https://flutter.dev/docs/cookbook/persistence/sqlite
@@ -361,7 +361,7 @@ class MyAppState extends State<MyApp> {
               SMSContact();
             },
           ),
-          /*MyMenuButton(
+          MyMenuButton(
             // https://pub.dev/packages/sentry#-installing-tab-
             // https://sentry.io/settings/account/api/applications/
             // https://sentry.io/organizations/pritam-khose/projects/pritam-khose/getting-started/
@@ -370,7 +370,7 @@ class MyAppState extends State<MyApp> {
             actionTap: () {
               MySentryCrashy();
             },
-          ),*/
+          ),
           MyMenuButton(
             // https://github.com/KalleHallden/Netflix_Clone
             title: "Netfilx clone",
