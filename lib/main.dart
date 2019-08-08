@@ -4,10 +4,10 @@ import 'package:flutter/material.dart';
 import 'fetch_data/main_fetch_data.dart';
 import 'user_listview/user_listview.dart';
 import 'myform/myform.dart';
-//import 'googlemap/googlemapsample.dart';
-//import 'googlemap/googlemapmarker.dart';
-//import 'googlemap/geolocatorloc.dart';
-//import 'firebase/fcm.dart';
+import 'googlemap/googlemapsample.dart';
+import 'googlemap/googlemapmarker.dart';
+import 'googlemap/geolocatorloc.dart';
+import 'firebase/fcm.dart';
 import 'animations/loader.dart';
 import 'navigation/tabs.dart';
 import 'navigation/slidenavigation.dart';
@@ -30,8 +30,8 @@ import 'video/chewievideoplayer.dart';
 import 'video/soundrecordplayer.dart';
 import 'sql/sqldatabase.dart';
 import 'sentry/sentrycrashy.dart';
-//import 'firebase/firebasehome.dart';
-//import 'firebase/ml_vision_firebase.dart';
+import 'firebase/firebasehome.dart';
+import 'firebase/ml_vision_firebase.dart';
 import 'codelab/flutter_default.dart';
 import 'codelab/cupertino-store-app.dart';
 import 'codelab/flutter_listview.dart';
@@ -120,7 +120,7 @@ class MyAppState extends State<MyApp> {
 //              onButtonTap(dioHttpClient());
 //            },
 //          ),
-          /* MyMenuButton(
+          MyMenuButton(
             // https://pub.dev/packages/google_maps_flutter
             title: "Google Map",
             actionTap: () {
@@ -195,7 +195,7 @@ class MyAppState extends State<MyApp> {
 //            actionTap: () {
 //              onButtonTap(AppPermission());
 //            },
-//          ),*/
+//          ),
           MyMenuButton(
             // https://pub.dev/packages/permission_handler#-installing-tab-
             // https://github.com/BaseflowIT/flutter-permission-handler/blob/develop/example/lib/main.dart
