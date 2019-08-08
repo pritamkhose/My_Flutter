@@ -36,7 +36,7 @@ import 'codelab/flutter_default.dart';
 import 'codelab/cupertino-store-app.dart';
 import 'codelab/flutter_listview.dart';
 import 'codelab/main_friendlychat.dart';
-//import 'maxmillian/maxmillian.dart';
+import 'maxmillian/maxmillian.dart';
 
 /* Link
  https://github.com/diegoveloper/flutter-samples
@@ -294,12 +294,12 @@ class MyAppState extends State<MyApp> {
               FlutterAnimations();
             },
           ),
-	        /*MyMenuButton(
+	        MyMenuButton(
             title: "Maxmillion APP",
             actionTap: () {
               onButtonTap(MaxmillionAPP());
             },
-          ),*/
+          ),
           MyMenuButton(
             // https://pub.dev/packages/shrine_images
             // https://codelabs.developers.google.com/?cat=Flutter
@@ -405,14 +405,14 @@ class MyAppState extends State<MyApp> {
               AdidasClone();
             },
           ),
-          /*MyMenuButton(
+          MyMenuButton(
             // https://flutter.dev/docs/get-started/codelab
             // https://codelabs.developers.google.com/codelabs/flutter/index.html?index=..%2F..index#3
             title: "Friendly chat App",
             actionTap: () {
               FriendlychatApp();
             },
-          ),*/
+          ),
 //          MyMenuButton(
 //            // https://github.com/frideosapps/data_examples
 //            // https://medium.com/flutter-community/simple-ways-to-pass-to-and-share-data-with-widgets-pages-f8988534bd5b
