@@ -26,8 +26,8 @@ import 'fileexploer/reading-writing-file.dart';
 import 'fileexploer/filepicker.dart';
 import 'shared_preferences/app_shared_preferences.dart';
 import 'qr/qrscanner.dart';
-//import 'video/chewievideoplayer.dart';
-//import 'video/soundrecordplayer.dart';
+import 'video/chewievideoplayer.dart';
+import 'video/soundrecordplayer.dart';
 import 'sql/sqldatabase.dart';
 //import 'sentry/sentrycrashy.dart';
 //import 'firebase/firebasehome.dart';
@@ -204,7 +204,7 @@ class MyAppState extends State<MyApp> {
               onButtonTap(ApplicationPermission());
             },
           ),
-          /*MyMenuButton(
+          MyMenuButton(
             // https://github.com/flutter/plugins/blob/master/packages/video_player/example/lib/main.dart
             // https://pub.dartlang.org/packages/video_player#-installing-tab-
             // https://github.com/tensor-programming/flutter_videoplayer_example/blob/master/lib/main.dart
@@ -223,7 +223,7 @@ class MyAppState extends State<MyApp> {
               SoundRecordPlayer();
             },
           ),
-          MyMenuButton(
+          /*MyMenuButton(
             // https://proandroiddev.com/communication-between-flutter-and-native-modules-9b52c6a72dd2
             // https://github.com/RafaO/FlutterNativeCommunication/blob/master/lib/main.dart
             title: "Flutter Native Communication",
