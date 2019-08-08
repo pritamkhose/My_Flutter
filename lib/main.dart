@@ -25,7 +25,7 @@ import 'samplescreen/adidas.dart';
 //import 'fileexploer/reading-writing-file.dart';
 //import 'fileexploer/filepicker.dart';
 //import 'shared_preferences/app_shared_preferences.dart';
-//import 'qr/qrscanner.dart';
+import 'qr/qrscanner.dart';
 //import 'video/chewievideoplayer.dart';
 //import 'video/soundrecordplayer.dart';
 //import 'sql/sqldatabase.dart';
@@ -264,7 +264,7 @@ class MyAppState extends State<MyApp> {
             actionTap: () {
               FlutterFilePicker();
             },
-          ),
+          ),*/
           MyMenuButton(
             // https://pub.dev/packages/qr_flutter
             //https://medium.com/flutter-community/building-flutter-qr-code-generator-scanner-and-sharing-app-703e73b228d3
@@ -279,7 +279,7 @@ class MyAppState extends State<MyApp> {
             //https://pub.dev/packages/qr_code_scanner#-readme-tab-
             //https://pub.dev/packages?q=qr
             //https://github.com/swissonid/BarcodeScannerPlugin
-          ),*/
+          ),
           MyMenuButton(
             // https://pub.dev/packages/webview_flutter#-example-tab-
             // https://github.com/flutter/plugins/blob/master/packages/webview_flutter/example/lib/main.dart
