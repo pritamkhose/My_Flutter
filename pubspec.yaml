@@ -30,6 +30,9 @@ dependencies:
   provider: ^3.0.0+1
   english_words: ^3.1.0
   intl: ^0.15.8
+  qr_flutter: ^2.0.0+51
+  barcode_scan: ^1.0.0
+  path_provider: ^1.1.0
 
 dev_dependencies:
   flutter_test:
