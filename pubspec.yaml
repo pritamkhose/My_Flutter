@@ -42,6 +42,8 @@ dependencies:
   chewie: ^0.9.7
   video_player: ^0.10.1+6
   flutter_sound: ^1.4.2
+  sentry: ^2.2.0
+  fluttertoast: ^3.1.0
 
 
 dev_dependencies:
