@@ -15,20 +15,20 @@ import 'navigation/home_page.dart';
 import 'util/url_launcher.dart';
 import 'util/sms.dart';
 import 'util/mywebview.dart';
-//import 'util/applicationpermission.dart';
+import 'util/applicationpermission.dart';
 //import 'flutternative/flutternative.dart';
 import 'samplescreen/netfilx.dart';
 import 'samplescreen/instagram.dart';
 import 'samplescreen/secretsanta.dart';
 import 'samplescreen/amazon.dart';
 import 'samplescreen/adidas.dart';
-//import 'fileexploer/reading-writing-file.dart';
-//import 'fileexploer/filepicker.dart';
-//import 'shared_preferences/app_shared_preferences.dart';
+import 'fileexploer/reading-writing-file.dart';
+import 'fileexploer/filepicker.dart';
+import 'shared_preferences/app_shared_preferences.dart';
 import 'qr/qrscanner.dart';
 //import 'video/chewievideoplayer.dart';
 //import 'video/soundrecordplayer.dart';
-//import 'sql/sqldatabase.dart';
+import 'sql/sqldatabase.dart';
 //import 'sentry/sentrycrashy.dart';
 //import 'firebase/firebasehome.dart';
 //import 'firebase/ml_vision_firebase.dart';
@@ -195,7 +195,7 @@ class MyAppState extends State<MyApp> {
 //            actionTap: () {
 //              onButtonTap(AppPermission());
 //            },
-//          ),
+//          ),*/
           MyMenuButton(
             // https://pub.dev/packages/permission_handler#-installing-tab-
             // https://github.com/BaseflowIT/flutter-permission-handler/blob/develop/example/lib/main.dart
@@ -204,7 +204,7 @@ class MyAppState extends State<MyApp> {
               onButtonTap(ApplicationPermission());
             },
           ),
-          MyMenuButton(
+          /*MyMenuButton(
             // https://github.com/flutter/plugins/blob/master/packages/video_player/example/lib/main.dart
             // https://pub.dartlang.org/packages/video_player#-installing-tab-
             // https://github.com/tensor-programming/flutter_videoplayer_example/blob/master/lib/main.dart
@@ -230,7 +230,7 @@ class MyAppState extends State<MyApp> {
             actionTap: () {
               FlutterNative();
             },
-          ),
+          ),*/
           MyMenuButton(
             // https://pub.dev/packages/sqflite
             // https://flutter.dev/docs/cookbook/persistence/sqlite
@@ -264,7 +264,7 @@ class MyAppState extends State<MyApp> {
             actionTap: () {
               FlutterFilePicker();
             },
-          ),*/
+          ),
           MyMenuButton(
             // https://pub.dev/packages/qr_flutter
             //https://medium.com/flutter-community/building-flutter-qr-code-generator-scanner-and-sharing-app-703e73b228d3
