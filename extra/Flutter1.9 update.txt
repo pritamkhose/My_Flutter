@@ -1,0 +1,108 @@
+Microsoft Windows [Version 10.0.16299.98]
+(c) 2017 Microsoft Corporation. All rights reserved.
+
+E:\Code\Java\FlutterWorkspace\My_Flutter>flutter doctor
+Doctor summary (to see all details, run flutter doctor -v):
+[√] Flutter (Channel stable, v1.9.1+hotfix.2, on Microsoft Windows [Version 10.0.16299.98], locale en-IN)
+
+[√] Android toolchain - develop for Android devices (Android SDK version 29.0.2)
+[√] Android Studio (version 3.5)
+[√] VS Code (version 1.38.1)
+[√] Connected device (1 available)
+
+• No issues found!
+
+E:\Code\Java\FlutterWorkspace\My_Flutter>flutter clean
+Deleting 'build\'.
+Deleting 'E:\Code\Java\FlutterWorkspace\My_Flutter\.dart_tool\'.
+Deleting 'E:\Code\Java\FlutterWorkspace\My_Flutter\.android\'.
+Deleting 'E:\Code\Java\FlutterWorkspace\My_Flutter\.ios\'.
+
+E:\Code\Java\FlutterWorkspace\My_Flutter>flutter packages upgrade resolved
+Running "flutter pub upgrade" in ....                              46.6s
+
+E:\Code\Java\FlutterWorkspace\My_Flutter>flutter pub upgrade
+Running "flutter pub upgrade" in My_Flutter...                     47.2s
+
+E:\Code\Java\FlutterWorkspace\My_Flutter>flutter packages upgrade
+Running "flutter pub upgrade" in My_Flutter...                     33.4s
+
+E:\Code\Java\FlutterWorkspace\My_Flutter>flutter clean
+Deleting 'build\'.
+Deleting 'E:\Code\Java\FlutterWorkspace\My_Flutter\.dart_tool\'.
+Deleting 'E:\Code\Java\FlutterWorkspace\My_Flutter\.android\'.
+Deleting 'E:\Code\Java\FlutterWorkspace\My_Flutter\.ios\'.
+
+E:\Code\Java\FlutterWorkspace\My_Flutter>flutter packages get
+Running "flutter pub get" in My_Flutter...                          0.8s
+
+E:\Code\Java\FlutterWorkspace\My_Flutter>flutter --version
+Flutter 1.9.1+hotfix.2 • channel stable • https://github.com/flutter/flutter.git
+Framework • revision 2d2a1ffec9 (13 days ago) • 2019-09-06 18:39:49 -0700
+Engine • revision b863200c37
+Tools • Dart 2.5.0
+
+E:\Code\Java\FlutterWorkspace\My_Flutter>flutter build apk --release
+You are building a fat APK that includes binaries for android-arm, android-arm64.
+If you are deploying the app to the Play Store, it's recommended to use app bundles or split the APK to reduce the APK
+size.
+    To generate an app bundle, run:
+        flutter build appbundle --target-platform android-arm,android-arm64
+        Learn more on: https://developer.android.com/guide/app-bundle
+    To split the APKs per ABI, run:
+        flutter build apk --target-platform android-arm,android-arm64 --split-per-abi
+        Learn more on:  https://developer.android.com/studio/build/configure-apk-splits#configure-abi-split
+Initializing gradle...                                              0.9s
+Resolving dependencies...                                          45.6s
+registerResGeneratingTask is deprecated, use registerGeneratedResFolders(FileCollection)
+registerResGeneratingTask is deprecated, use registerGeneratedResFolders(FileCollection)
+registerResGeneratingTask is deprecated, use registerGeneratedResFolders(FileCollection)
+
+Compiler message:
+lib/qr/generate.dart:114:19: Error: No named parameter with the name 'onError'.
+                  onError: (ex) {
+                  ^^^^^^^
+/E:/Software/AndroidStudio/flutter/.pub-cache/hosted/pub.dartlang.org/qr_flutter-3.0.1/lib/src/qr_image.dart:23:3: Context: Found this candidate, but the arguments don't match.
+  QrImage({
+  ^
+Compiler terminated unexpectedly.
+Running Gradle task 'assembleRelease'...
+Running Gradle task 'assembleRelease'... Done                      34.4s
+Gradle task assembleRelease failed with exit code 1
+
+E:\Code\Java\FlutterWorkspace\My_Flutter>flutter build apk --release
+You are building a fat APK that includes binaries for android-arm, android-arm64.
+If you are deploying the app to the Play Store, it's recommended to use app bundles or split the APK to reduce the APK
+size.
+    To generate an app bundle, run:
+        flutter build appbundle --target-platform android-arm,android-arm64
+        Learn more on: https://developer.android.com/guide/app-bundle
+    To split the APKs per ABI, run:
+        flutter build apk --target-platform android-arm,android-arm64 --split-per-abi
+        Learn more on:  https://developer.android.com/studio/build/configure-apk-splits#configure-abi-split
+Initializing gradle...                                              1.0s
+Resolving dependencies...                                           9.1s
+registerResGeneratingTask is deprecated, use registerGeneratedResFolders(FileCollection)
+registerResGeneratingTask is deprecated, use registerGeneratedResFolders(FileCollection)
+registerResGeneratingTask is deprecated, use registerGeneratedResFolders(FileCollection)
+Running Gradle task 'assembleRelease'...                Note: E:\Software\AndroidStudio\flutter\.pub-cache\hosted\pub.dartlang.org\cloud_firestore-0.12.9+4\android\src\main\java\io\flutter\plugins\firebase\cloudfirestore\CloudFirestorePlugin.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+Note: E:\Software\AndroidStudio\flutter\.pub-cache\hosted\pub.dartlang.org\cloud_firestore-0.12.9+4\android\src\main\java\io\flutter\plugins\firebase\cloudfirestore\CloudFirestorePlugin.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+Note: E:\Software\AndroidStudio\flutter\.pub-cache\hosted\pub.dartlang.org\firebase_messaging-5.1.5\android\src\main\java\io\flutter\plugins\firebasemessaging\FlutterFirebaseMessagingService.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+Note: E:\Software\AndroidStudio\flutter\.pub-cache\hosted\pub.dartlang.org\firebase_messaging-5.1.5\android\src\main\java\io\flutter\plugins\firebasemessaging\FirebaseMessagingPlugin.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+Note: Some input files use unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+Note: E:\Software\AndroidStudio\flutter\.pub-cache\hosted\pub.dartlang.org\url_launcher-5.1.3\android\src\main\java\io\flutter\plugins\urllauncher\WebViewActivity.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+Note: Some input files use or override a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+Calling mockable JAR artifact transform to create file: C:\Users\Pritam\.gradle\caches\transforms-2\files-2.1\a3c88a70cdc0ae844c59b85a8473cdc6\android.jar with input E:\Software\AndroidStudio\SDK\platforms\android-28\android.jar
+Calling mockable JAR artifact transform to create file: C:\Users\Pritam\.gradle\caches\transforms-2\files-2.1\1d50cf893966b6f725cc6e6de94ca3ad\android.jar with input E:\Software\AndroidStudio\SDK\platforms\android-29\android.jar
+Running Gradle task 'assembleRelease'...
+Running Gradle task 'assembleRelease'... Done                    1300.5s (!)
+Built build\app\outputs\apk\release\app-release.apk (33.3MB).
+
+E:\Code\Java\FlutterWorkspace\My_Flutter>

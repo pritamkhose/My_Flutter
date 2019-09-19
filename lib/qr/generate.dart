@@ -111,8 +111,8 @@ class GenerateScreenState extends State<GenerateScreen> {
                 child: QrImage(
                   data: _dataString,
                   size: 0.5 * bodyHeight,
-                  onError: (ex) {
-                    print("[QR] ERROR - $ex");
+                  errorStateBuilder: (context, err) {
+                    print("[QR] ERROR - $err");
                     setState((){
                       _inputErrorText = "Error! Maybe your input value is too long?";
                     });
