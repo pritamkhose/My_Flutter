@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 
 import 'dart:convert';
 import 'dart:io';
@@ -8,10 +9,10 @@ import 'package:http/http.dart' as http;
 import 'dart:async';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 
-import 'messaging_widget.dart';
 import 'notifymessage.dart';
 
 void FCMNotify() => runApp(new MyApp());
+// void main() => runApp(FCMNotify());
 
 /*class MyApp extends StatelessWidget {
   final String appTitle = 'Firebase messaging';
@@ -36,16 +37,15 @@ class MainPage extends StatelessWidget {
   );
 }*/
 
-
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return new MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Firebase messaging',
       theme: new ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: new MyHomePage(title: 'Flutter Demo Home Page'),
+      home: new MyHomePage(title: 'FCM messaging'),
     );
   }
 }
@@ -65,6 +65,9 @@ class _MyHomePageState extends State<MyHomePage> {
 
   FirebaseMessaging _firebaseMessaging = new FirebaseMessaging();
   String atoken = '';
+  String atitle = 'No title';
+  String amessage = 'No message';
+  final _formKey = GlobalKey<FormState>();
 
   @override
   void initState() {
@@ -123,19 +126,64 @@ class _MyHomePageState extends State<MyHomePage> {
         title: new Text(widget.title),
       ),
       body: Container(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            RaisedButton(
-              child: new Text("Send Notification"),
-              onPressed: _sendNotify,
-            ),
-            RaisedButton(
-              child: new Text("Local Notification"),
-              onPressed: showNotification,
-            ),
-            Text('Device Token = '+ atoken),
-          ],
+        child: Form(
+          key: _formKey,
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: <Widget>[
+              TextFormField(
+                validator: (value) {
+                  if (value.isEmpty || value.length < 1) {
+                    return 'Enter title';
+                  } else {
+                    atitle = value;
+                  }
+                },
+                onSaved: (String value) {
+                  atitle = value;
+                },
+              ),
+              TextFormField(
+                validator: (value) {
+                  if (value.isEmpty || value.length < 1) {
+                    return 'Enter message';
+                  } else {
+                    amessage = value;
+                  }
+                  return null;
+                },
+                onSaved: (String value) {
+                  print(value);
+                  amessage = value;
+                },
+              ),
+              Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                  RaisedButton(
+                      child: new Text("Send FCM Notification"),
+                      onPressed: () {
+                        if (_formKey.currentState.validate()) {
+                          _sendNotify(atitle, amessage);
+                        } else {
+                          Fluttertoast.showToast(msg: 'Enter title & message');
+                        }
+                      }),
+                  RaisedButton(
+                    child: new Text("Local Notification"),
+                    onPressed: () {
+                      if (_formKey.currentState.validate()) {
+                        showNotification(atitle, amessage);
+                      } else {
+                        Fluttertoast.showToast(msg: 'Enter title & message');
+                      }
+                    },
+                  ),
+                  Text('Device Token = ' + atoken),
+                ],
+              ),
+            ],
+          ),
         ),
       ),
     );
@@ -143,7 +191,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
   var isLoading = false;
 
-  _sendNotify() async {
+  _sendNotify(atitle, amessage) async {
     try {
       setState(() {
         isLoading = true;
@@ -158,8 +206,8 @@ class _MyHomePageState extends State<MyHomePage> {
         "registration_ids": [atoken],
         "priority": "high",
         "notification": {
-          "title": "Pritam Multiple Notification",
-          "body": "Pritam is Very Very Happy with FCM!"
+          "title": atitle,
+          "body": amessage
         },
         "data": {
           "Key-1": "JSA Data 1",
@@ -222,7 +270,6 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 
-
   Future onSelectNotification(String payload) {
     debugPrint("payload : $payload");
     showDialog(
@@ -234,14 +281,13 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 
-  showNotification() async {
+  showNotification(_title, _message) async {
     var android = new AndroidNotificationDetails(
         'channel id', 'channel NAME', 'CHANNEL DESCRIPTION',
         priority: Priority.High, importance: Importance.Max);
     var iOS = new IOSNotificationDetails();
     var platform = new NotificationDetails(android, iOS);
-    await flutterLocalNotificationsPlugin.show(
-        0, 'New Video is out', 'Flutter Local Notification', platform,
+    await flutterLocalNotificationsPlugin.show(0, _title, _message, platform,
         payload: 'Nitish Kumar Singh is part time Youtuber');
   }
 
@@ -253,6 +299,6 @@ class _MyHomePageState extends State<MyHomePage> {
     var platform = new NotificationDetails(android, iOS);
     await flutterLocalNotificationsPlugin.show(
         0, message[0].title, message[0].body, platform,
-        payload: 'Nitish Kumar Singh is part time Youtuber');
+        payload: 'FCM Notification');
   }
 }
