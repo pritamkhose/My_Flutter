@@ -70,17 +70,17 @@ class EnsureVisibleWhenFocusedState extends State<EnsureVisibleWhenFocused> {
     } else if (position.pixels < viewport.getOffsetToReveal(object, 1.0)) {
       // Move up to the bottom of the viewport
       alignment = 1.0;
-    } else */
-      {
+    } else
+      {*/
       // No scrolling is necessary to reveal the child
       return;
-    }
+   /* }
     position.ensureVisible(
       object,
       alignment: alignment,
       duration: widget.duration,
       curve: widget.curve,
-    );
+    );*/
   }
 
   Widget build(BuildContext context) => widget.child;

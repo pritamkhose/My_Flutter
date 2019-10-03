@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 //import 'package:simple_permissions/simple_permissions.dart';
 
 // https://pub.dev/packages/simple_permissions#-readme-tab-
 // https://pub.dev/packages/permission
 
-void main() => runApp(AppPermission());
+void main() => runApp(appPermission());
 
-class AppPermission extends StatelessWidget {
+class appPermission extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -76,7 +75,7 @@ class _MyAppState extends State<MyApp> {
                 onPressed: getPermissionStatus,
                 child: new Text("Get permission status")),
             new RaisedButton(
-//                onPressed: SimplePermissions.openSettings,
+                onPressed: () {}, //SimplePermissions.openSettings,
                 child: new Text("Open settings")),
             new RaisedButton(
                 onPressed: requestAllPermission,

@@ -248,7 +248,7 @@ class MyAppState extends State<MyApp> {
             // https://pub.dev/packages/hive
             title: "Hive DB",
             actionTap: () {
-              onButtonTap(hiveDB());
+              onButtonTap(HiveDB());
             },
           ),
           MyMenuButton(

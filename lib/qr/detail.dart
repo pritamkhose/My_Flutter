@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 import 'dart:io';
-import 'dart:async';
 
 class DetailWidget extends StatefulWidget  {
 

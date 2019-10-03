@@ -1,11 +1,7 @@
-import 'dart:convert';
-import 'dart:io';
-
 import 'package:flutter/services.dart';
 
 import 'data.dart';
 import 'package:flutter/material.dart';
-import 'package:http/http.dart' as http;
 
 class SampleForm extends StatelessWidget {
   @override
@@ -52,10 +48,6 @@ class _SampleFormState extends State<SampleFormStateful> {
     };
 
     List<String> items = <String>['A item', 'B item', 'C item', 'D item'];
-    Map<String, bool> values = {
-      'foo': true,
-      'bar': false,
-    };
 
     return Form(
       key: _formKey,

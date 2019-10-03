@@ -14,7 +14,6 @@ class UsersList extends StatefulWidget {
 }
 
 class _UsersListState extends State<UsersList> {
-  @override
   Future<List<User>> _getUsers() async {
     List<User> users = [];
     var response = await http.get('https://api.randomuser.me/?results=20');

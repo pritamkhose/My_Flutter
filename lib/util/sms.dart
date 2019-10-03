@@ -31,9 +31,6 @@ class _MyAppState extends State<MyApp> {
   }
 
   void _sendSMS(String message, List<String> recipents) async {
-    String _result = '';
-    // await FlutterSms.sendSMS(message: message, recipients: recipents);
-   // setState(() => _message = _result);
   }
 
   Widget _phoneTile(String name) {

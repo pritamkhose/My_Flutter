@@ -50,13 +50,13 @@ class HomeView extends StatelessWidget {
                         )
                         ),
                         FlatButton(
-                          child: Text('Series', style: topMenuStyle,),
+                          child: Text('Series', style: topMenuStyle,), onPressed: () {},
                         ),
                         FlatButton(
-                          child: Text('Films', style: topMenuStyle,),
+                          child: Text('Films', style: topMenuStyle,), onPressed: () {},
                         ),
                         FlatButton(
-                          child: Text('My List', style: topMenuStyle,),
+                          child: Text('My List', style: topMenuStyle,), onPressed: () {},
                         ),
                       ],
                     ),
