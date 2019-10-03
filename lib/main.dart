@@ -29,6 +29,7 @@ import 'qr/qrscanner.dart';
 import 'video/chewievideoplayer.dart';
 import 'video/soundrecordplayer.dart';
 import 'sql/sqldatabase.dart';
+import 'hivedb/myhivedb.dart';
 import 'sentry/sentrycrashy.dart';
 import 'firebase/firebasehome.dart';
 import 'firebase/ml_vision_firebase.dart';
@@ -239,6 +240,15 @@ class MyAppState extends State<MyApp> {
             title: "Sql Database",
             actionTap: () {
               onButtonTap(MySqlDatabase());
+            },
+          ),
+           MyMenuButton(
+            // https://github.com/ResoCoder/hive-db-tutorial
+            // https://resocoder.com/2019/09/30/hive-flutter-tutorial-lightweight-fast-database/
+            // https://pub.dev/packages/hive
+            title: "Hive DB",
+            actionTap: () {
+              onButtonTap(hiveDB());
             },
           ),
           MyMenuButton(

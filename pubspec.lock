@@ -144,6 +144,20 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.5.21+2"
+  hive:
+    dependency: "direct main"
+    description:
+      name: hive
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "1.0.0"
+  hive_flutter:
+    dependency: "direct main"
+    description:
+      name: hive_flutter
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.2.1"
   http:
     dependency: "direct main"
     description:
@@ -235,6 +249,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "2.2.1"
+  pointycastle:
+    dependency: transitive
+    description:
+      name: pointycastle
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "1.0.1"
   provider:
     dependency: "direct main"
     description:
