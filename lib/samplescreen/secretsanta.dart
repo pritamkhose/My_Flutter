@@ -53,6 +53,7 @@ class Present {
     }
   }
 
+  // ignore: missing_return
   int getGuessesForMember(Member member) {
     if (listOfGuesses.containsKey(member)) {
       return listOfGuesses[member];

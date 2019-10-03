@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'user.dart';
 import 'post.dart';
 import 'comment.dart';
-import 'appbar.dart';
 
 
 TextStyle textStyle = new TextStyle(fontFamily: 'Gotham');

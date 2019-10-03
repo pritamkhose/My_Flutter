@@ -59,7 +59,7 @@ class _MyHomePageState extends State<_MyHomePage> {
   Future<void> _getImageSize(File imageFile) async {
     final Completer<Size> completer = Completer<Size>();
 
-    final Image image = Image.file(imageFile);
+//    final Image image = Image.file(imageFile);
 //    image.image.resolve(const ImageConfiguration()).addListener(
 //      ImageStreamListener((ImageInfo info, bool _) {
 //        completer.complete(Size(

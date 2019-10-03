@@ -1,14 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:scoped_model/scoped_model.dart';
-import 'package:flutter/rendering.dart';
-
 import 'pages/auth.dart';
 import 'pages/products_admin.dart';
 import 'pages/products.dart';
 import 'pages/product.dart';
 import 'scoped-models/main.dart';
 import 'models/product.dart';
-import './shared/global_config.dart';
+
 
 // https://console.cloud.google.com/apis/credentials?folder=&organizationId=&project=securance-94e24
 // https://console.firebase.google.com/project/fiberbase-4b621/settings/general/android:com.example.my_flutter

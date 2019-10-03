@@ -12,10 +12,10 @@ void main() async {
       await path_provider.getApplicationDocumentsDirectory();
   Hive.init(appDocumentDirectory.path);
   Hive.registerAdapter(ContactAdapter(), 0);
-  runApp(hiveDB());
+  runApp(HiveDB());
 }
 
-class hiveDB extends StatelessWidget {
+class HiveDB extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // TODO: implement build

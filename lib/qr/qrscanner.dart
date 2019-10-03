@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'scan.dart';
 import 'generate.dart';
-import 'fastqrscreen.dart';
 import 'package:flutter/rendering.dart';
 void QRCodeScanner() => runApp(QRCodeScannerHome());
 
