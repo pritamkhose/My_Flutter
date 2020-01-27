@@ -32,7 +32,7 @@ import 'sql/sqldatabase.dart';
 import 'hivedb/myhivedb.dart';
 import 'sentry/sentrycrashy.dart';
 import 'firebase/firebasehome.dart';
-import 'firebase/ml_vision_firebase.dart';
+// import 'firebase/ml_vision_firebase.dart';
 import 'codelab/flutter_default.dart';
 import 'codelab/cupertino-store-app.dart';
 import 'codelab/flutter_listview.dart';
@@ -162,7 +162,8 @@ class MyAppState extends State<MyApp> {
             // https://github.com/flutter/plugins/blob/master/packages/firebase_ml_vision/example/lib/main.dart
             title: "Firebase ML vision",
             actionTap: () {
-              onButtonTap(FirebaseMLKitHome());
+             // onButtonTap(FirebaseMLKitHome());
+              onButtonTap(FirebaseHome());
             },
           ),
           MyMenuButton(
